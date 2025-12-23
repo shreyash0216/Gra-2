@@ -1,0 +1,8 @@
+
+{
+  "name": "KOSMOS: Climate Adaptation Suite",
+  "description": "A comprehensive hyper-local climate adaptation platform designed for rural India. It provides AI-driven crop recommendations, water conservation blueprints, and budget estimates to help farmers adapt to changing climate conditions.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
