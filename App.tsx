@@ -160,21 +160,66 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            {/* Problem Statement Section */}
+            {/* Problem-Solution Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white dark:bg-navy-900/50 p-12 rounded-[3rem] border border-parchment-200 dark:border-slate-800">
               <div>
                 <h2 className="text-4xl font-serif font-bold text-navy-900 dark:text-white mb-6">Climate change hits locally... <span className="text-emerald-600">but our solutions don't.</span></h2>
                 <div className="space-y-4">
+                  <div className="flex gap-4 items-start">
+                    <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-xs font-bold shrink-0">01</div>
+                    <div>
+                      <p className="font-bold text-navy-900 dark:text-white mb-2">
+                        <span className="text-orange-600">Current:</span> Some tools give location-based suggestions, but they are fixed.
+                      </p>
+                      <p className="font-bold text-navy-900 dark:text-white">
+                        <span className="text-emerald-600">Unique:</span> A Generative Resilience Agent gives smart, changing steps for your exact place.
+                      </p>
+                    </div>
+                  </div>
                   {[
-                    { text: "No system currently gives location-specific adaptation steps.", bold: true },
                     { text: "Generic advice like 'save water' doesn't help specific plots.", bold: false },
                     { text: "Conditions differ: soil, micro-climate, and flood history.", bold: false }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 items-start">
-                      <div className="w-8 h-8 rounded-full bg-parchment-200 dark:bg-navy-800 flex items-center justify-center text-xs font-bold shrink-0">0{i+1}</div>
-                      <p className={`${item.bold ? 'font-bold text-navy-900 dark:text-white' : 'text-slate-600 dark:text-slate-400'}`}>{item.text}</p>
+                      <div className="w-8 h-8 rounded-full bg-parchment-200 dark:bg-navy-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-xs font-bold shrink-0">0{i+2}</div>
+                      <p className="text-slate-600 dark:text-slate-400">{item.text}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+              <div className="bg-emerald-50 dark:bg-emerald-900/20 p-8 rounded-3xl border border-emerald-200 dark:border-emerald-800">
+                <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">GRA Solution:</p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 shrink-0"></div>
+                    <p className="text-sm font-semibold text-emerald-800 dark:text-emerald-300">
+                      <strong>Systematic Planning:</strong> AI-driven analysis of 200+ agricultural records for precise recommendations
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 shrink-0"></div>
+                    <p className="text-sm font-semibold text-emerald-800 dark:text-emerald-300">
+                      <strong>Soil-Climate Matching:</strong> Multi-factor analysis including rainfall patterns, soil pH, and historical success rates
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 shrink-0"></div>
+                    <p className="text-sm font-semibold text-emerald-800 dark:text-emerald-300">
+                      <strong>Location-Specific Blueprints:</strong> Detailed implementation plans with local material costs and timelines
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 shrink-0"></div>
+                    <p className="text-sm font-semibold text-emerald-800 dark:text-emerald-300">
+                      <strong>Smart Fallback System:</strong> 6-level recommendation engine ensures solutions for every scenario
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 shrink-0"></div>
+                    <p className="text-sm font-semibold text-emerald-800 dark:text-emerald-300">
+                      <strong>Real-time Adaptation:</strong> Dynamic crop recommendations based on changing climate conditions
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
