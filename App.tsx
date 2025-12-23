@@ -169,10 +169,10 @@ const App: React.FC = () => {
                     <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-xs font-bold shrink-0">01</div>
                     <div>
                       <p className="font-bold text-navy-900 dark:text-white mb-2">
-                        <span className="text-orange-600">Current:</span> Some tools give location-based suggestions, but they are fixed.
+                        <span className="text-orange-600">Current:</span> Some tools give location-based suggestions, but they are <span className="underline decoration-orange-400 decoration-2">fixed.</span>
                       </p>
                       <p className="font-bold text-navy-900 dark:text-white">
-                        <span className="text-emerald-600">Unique:</span> <span className="underline decoration-emerald-400 decoration-2">A Generative Resilience Agent gives smart, changing steps for your exact place.</span>
+                        <span className="text-emerald-600">Unique:</span> A Generative Resilience Agent gives smart, <span className="underline decoration-emerald-400 decoration-2">changing steps</span> for your exact place.
                       </p>
                     </div>
                   </div>
