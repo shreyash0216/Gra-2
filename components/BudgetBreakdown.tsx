@@ -200,19 +200,23 @@ const BudgetBreakdown: React.FC<BudgetBreakdownProps> = ({ strategy, theme }) =>
           ))}
         </div>
 
-        {/* Total Row */}
-        <div className="bg-navy-900 text-white px-6 py-4">
+        {/* Total Row - Enhanced Visibility */}
+        <div className="bg-gradient-to-r from-navy-900 to-emerald-900 text-white px-8 py-6 shadow-lg">
           <div className="grid grid-cols-12 gap-4 items-center">
-            <div className="col-span-9">
+            <div className="col-span-8">
               <div className="flex items-center gap-3">
-                <IndianRupee className="w-5 h-5 text-emerald-400" />
-                <span className="text-lg font-bold">Total Estimated Cost</span>
+                <div className="p-2 bg-emerald-500/20 rounded-xl">
+                  <IndianRupee className="w-6 h-6 text-emerald-400" />
+                </div>
+                <span className="text-xl font-bold">Total Estimated Cost</span>
               </div>
             </div>
-            <div className="col-span-3 text-right">
-              <span className="text-2xl font-bold text-emerald-400">
-                ₹{strategy.total_investment.toLocaleString()}
-              </span>
+            <div className="col-span-4 text-right">
+              <div className="bg-emerald-500/10 rounded-2xl px-6 py-3 border border-emerald-400/30">
+                <span className="text-3xl font-black text-emerald-400 tracking-tight">
+                  ₹{strategy.total_investment.toLocaleString()}
+                </span>
+              </div>
             </div>
           </div>
         </div>

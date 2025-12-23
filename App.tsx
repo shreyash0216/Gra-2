@@ -166,13 +166,13 @@ const App: React.FC = () => {
                 <h2 className="text-4xl font-serif font-bold text-navy-900 dark:text-white mb-6">Climate change hits locally... <span className="text-emerald-600">but our solutions don't.</span></h2>
                 <div className="space-y-4">
                   {[
-                    "Generic advice like 'save water' doesn't help specific plots.",
-                    "Conditions differ: soil, micro-climate, and flood history.",
-                    "No system currently gives location-specific adaptation steps."
-                  ].map((text, i) => (
+                    { text: "No system currently gives location-specific adaptation steps.", bold: true },
+                    { text: "Generic advice like 'save water' doesn't help specific plots.", bold: false },
+                    { text: "Conditions differ: soil, micro-climate, and flood history.", bold: false }
+                  ].map((item, i) => (
                     <div key={i} className="flex gap-4 items-start">
                       <div className="w-8 h-8 rounded-full bg-parchment-200 dark:bg-navy-800 flex items-center justify-center text-xs font-bold shrink-0">0{i+1}</div>
-                      <p className="text-slate-600 dark:text-slate-400">{text}</p>
+                      <p className={`${item.bold ? 'font-bold text-navy-900 dark:text-white' : 'text-slate-600 dark:text-slate-400'}`}>{item.text}</p>
                     </div>
                   ))}
                 </div>
