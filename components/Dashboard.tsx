@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { AdaptationPlan, VillageData, Theme, Strategy, Blueprint, SimulationParams } from '../types';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { AdaptationPlan, VillageData, Theme, Blueprint, SimulationParams } from '../types';
 import { 
-  Download, ChevronRight, Layers, Droplets, Leaf, Construction, 
+  Download, Layers, Leaf, Construction, 
   Calendar, ListChecks, Info, LayoutDashboard, Map, Zap, 
-  ThermometerSun, CloudRain, ArrowDownToLine, Sliders, Globe,
+  ThermometerSun, CloudRain, ArrowDownToLine, Sliders,
   ChevronDown, ChevronUp, FileText, Package
 } from 'lucide-react';
-import VisualBlueprint from './VisualBlueprint';
 import DataInsights from './DataInsights';
+import BudgetBreakdown from './BudgetBreakdown';
+import FarmLayoutBlueprint from './FarmLayoutBlueprint';
 
 interface Props {
   plan: AdaptationPlan;
@@ -17,9 +17,7 @@ interface Props {
   theme: Theme;
 }
 
-const COLORS = ['#059669', '#10b981', '#34d399', '#6ee7b7', '#a7f3d0'];
-
-const Dashboard: React.FC<Props> = ({ plan, data, onReset, theme }) => {
+const Dashboard: React.FC<Props> = ({ plan, data, theme }) => {
   const [activeStrategyId, setActiveStrategyId] = useState<string>(plan.strategies[0].id);
   const [simParams, setSimParams] = useState<SimulationParams>({
     rainfall_change: 0,
@@ -30,12 +28,6 @@ const Dashboard: React.FC<Props> = ({ plan, data, onReset, theme }) => {
   const [expandedSummaryId, setExpandedSummaryId] = useState<string | null>(null);
 
   const activeStrategy = plan.strategies.find(s => s.id === activeStrategyId) || plan.strategies[0];
-  const isDark = theme === 'dark';
-
-  const chartData = activeStrategy.structures.map(s => ({
-    name: s.name,
-    cost: s.estimated_cost
-  }));
 
   // Simple simulation logic for UI feedback
   const getImpactMessage = () => {
@@ -66,8 +58,6 @@ const Dashboard: React.FC<Props> = ({ plan, data, onReset, theme }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 relative z-10">
         <div className="md:col-span-7 space-y-8">
-          <VisualBlueprint blueprint={bp} />
-          
           <div className="p-6 bg-parchment-50 dark:bg-navy-800/50 rounded-2xl border border-dashed border-parchment-300 dark:border-slate-700">
             <h5 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
               <ListChecks className="w-4 h-4 text-emerald-500" /> Precise Execution Guidelines
@@ -360,43 +350,18 @@ const Dashboard: React.FC<Props> = ({ plan, data, onReset, theme }) => {
             theme={theme} 
           />
           
-          {/* Cost Analysis - Cleaner Design */}
-          <div className="bg-white dark:bg-navy-900 p-6 rounded-2xl border border-parchment-200 dark:border-slate-800 shadow-sm">
-            <h3 className="text-lg font-semibold mb-6 flex items-center gap-3 dark:text-white">
-              <Construction className="w-5 h-5 text-emerald-600" />
-              Cost Breakdown
-            </h3>
-            <div className="h-[200px] w-full mb-6">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} layout="vertical">
-                  <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke={isDark ? '#334155' : '#e2e8f0'} />
-                  <XAxis type="number" hide />
-                  <YAxis dataKey="name" type="category" width={80} style={{ fontSize: '10px', fill: isDark ? '#94a3b8' : '#64748b' }} />
-                  <Tooltip
-                    contentStyle={{ backgroundColor: isDark ? '#1e293b' : '#ffffff', border: 'none', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-                    itemStyle={{ color: isDark ? '#f1f5f9' : '#1e293b', fontSize: '12px' }}
-                    formatter={(value: number) => `₹${value.toLocaleString()}`}
-                  />
-                  <Bar dataKey="cost" radius={[0, 8, 8, 0]}>
-                    {chartData.map((_, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="space-y-3">
-              {activeStrategy.structures.map((s, i) => (
-                <div key={i} className="flex justify-between items-center p-3 bg-parchment-50 dark:bg-navy-800 rounded-xl border border-parchment-100 dark:border-slate-800">
-                  <div>
-                    <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider">{s.location_type}</span>
-                    <span className="font-semibold text-navy-900 dark:text-slate-200 text-sm">{s.name}</span>
-                  </div>
-                  <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">₹{s.estimated_cost.toLocaleString()}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Farm Layout Blueprint - Simple and Easy to Understand */}
+          <FarmLayoutBlueprint 
+            strategy={activeStrategy} 
+            villageData={data} 
+            theme={theme} 
+          />
+          
+          {/* Detailed Budget Breakdown - Enhanced */}
+          <BudgetBreakdown 
+            strategy={activeStrategy} 
+            theme={theme} 
+          />
 
           {/* System Status - Cleaner Badge */}
           <div className="p-6 bg-emerald-600 text-white rounded-2xl shadow-lg relative overflow-hidden">

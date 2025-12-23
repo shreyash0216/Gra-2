@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Compatible Test Inputs for Agricultural Dataset</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f5f5f5;
+        }
+        .test-case { 
+            background: white;
+            margin: 20px 0; 
+            padding: 20px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .test-case h2 {
+            color: #2c5530;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .input-data {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .expected-output {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .confidence-level {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        .high { background-color: #d4edda; color: #155724; }
+        .medium { background-color: #fff3cd; color: #856404; }
+        .low { background-color: #f8d7da; color: #721c24; }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌾 5 Compatible Test Inputs for KOSMOS Agricultural Dataset</h1>
+    <p><strong>Purpose:</strong> These test inputs are designed to work with the agricultural dataset and provide realistic confidence scores and crop recommendations.</p>
+
+    <!-- Test Case 1: High Confidence - Black Soil + Rice -->
+    <div class="test-case">
+        <h2>Test Case 1: High Confidence Scenario</h2>
+        <div class="confidence-level high">Expected Confidence: 75-85%</div>
+        
+        <div class="input-data">
+            <h3>📝 Input Data:</h3>
+            <code>
+            {<br>
+            &nbsp;&nbsp;"village": "Test Village Maharashtra",<br>
+            &nbsp;&nbsp;"latitude": 18.5626,<br>
+            &nbsp;&nbsp;"longitude": 73.8087,<br>
+            &nbsp;&nbsp;"soil_type": "Black",<br>
+            &nbsp;&nbsp;"annual_rainfall": 1200,<br>
+            &nbsp;&nbsp;"crops_current": ["Rice"],<br>
+            &nbsp;&nbsp;"groundwater_depth": 15,<br>
+            &nbsp;&nbsp;"flood_history": "No"<br>
+            }
+            </code>
+        </div>
+        
+        <div class="expected-output">
+            <h3>🎯 Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> High (75-85%) - Many rainfall matches (~1200mm), Black soil matches, Rice crop matches</li>
+                <li><strong>Crop Recommendations:</strong> Rice, Cotton, Sugarcane</li>
+                <li><strong>Reasoning:</strong> Matches Maharashtra Black soil + 1200mm rainfall pattern from dataset</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 2: Medium Confidence - Alluvial Soil + Wheat -->
+    <div class="test-case">
+        <h2>Test Case 2: Medium Confidence Scenario</h2>
+        <div class="confidence-level medium">Expected Confidence: 60-70%</div>
+        
+        <div class="input-data">
+            <h3>📝 Input Data:</h3>
+            <code>
+            {<br>
+            &nbsp;&nbsp;"village": "Test Village Punjab",<br>
+            &nbsp;&nbsp;"latitude": 30.9010,<br>
+            &nbsp;&nbsp;"longitude": 75.8573,<br>
+            &nbsp;&nbsp;"soil_type": "Alluvial",<br>
+            &nbsp;&nbsp;"annual_rainfall": 600,<br>
+            &nbsp;&nbsp;"crops_current": ["Wheat"],<br>
+            &nbsp;&nbsp;"groundwater_depth": 20,<br>
+            &nbsp;&nbsp;"flood_history": "No"<br>
+            }
+            </code>
+        </div>
+        
+        <div class="expected-output">
+            <h3>🎯 Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> Medium (60-70%) - Good Alluvial soil matches, Wheat crop matches, moderate rainfall matches</li>
+                <li><strong>Crop Recommendations:</strong> Wheat, Maize, Rice</li>
+                <li><strong>Reasoning:</strong> Matches Punjab Alluvial soil + 600mm rainfall pattern from dataset</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 3: High Confidence - Red Soil + Cotton -->
+    <div class="test-case">
+        <h2>Test Case 3: High Confidence Cotton Scenario</h2>
+        <div class="confidence-level high">Expected Confidence: 70-80%</div>
+        
+        <div class="input-data">
+            <h3>📝 Input Data:</h3>
+            <code>
+            {<br>
+            &nbsp;&nbsp;"village": "Test Village Karnataka",<br>
+            &nbsp;&nbsp;"latitude": 13.1007,<br>
+            &nbsp;&nbsp;"longitude": 77.5963,<br>
+            &nbsp;&nbsp;"soil_type": "Red",<br>
+            &nbsp;&nbsp;"annual_rainfall": 950,<br>
+            &nbsp;&nbsp;"crops_current": ["Cotton"],<br>
+            &nbsp;&nbsp;"groundwater_depth": 25,<br>
+            &nbsp;&nbsp;"flood_history": "No"<br>
+            }
+            </code>
+        </div>
+        
+        <div class="expected-output">
+            <h3>🎯 Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> High (70-80%) - Red soil matches, Cotton crop matches, good rainfall matches</li>
+                <li><strong>Crop Recommendations:</strong> Cotton, Maize, Rice</li>
+                <li><strong>Reasoning:</strong> Matches Karnataka Red soil + 950mm rainfall + Cotton pattern from dataset</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 4: Medium Confidence - Multiple Crops -->
+    <div class="test-case">
+        <h2>Test Case 4: Medium Confidence Multi-Crop Scenario</h2>
+        <div class="confidence-level medium">Expected Confidence: 65-75%</div>
+        
+        <div class="input-data">
+            <h3>📝 Input Data:</h3>
+            <code>
+            {<br>
+            &nbsp;&nbsp;"village": "Test Village Telangana",<br>
+            &nbsp;&nbsp;"latitude": 17.4399,<br>
+            &nbsp;&nbsp;"longitude": 78.4983,<br>
+            &nbsp;&nbsp;"soil_type": "Black",<br>
+            &nbsp;&nbsp;"annual_rainfall": 1100,<br>
+            &nbsp;&nbsp;"crops_current": ["Cotton", "Rice"],<br>
+            &nbsp;&nbsp;"groundwater_depth": 18,<br>
+            &nbsp;&nbsp;"flood_history": "No"<br>
+            }
+            </code>
+        </div>
+        
+        <div class="expected-output">
+            <h3>🎯 Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> Medium-High (65-75%) - Black soil matches, multiple crop matches, good rainfall</li>
+                <li><strong>Crop Recommendations:</strong> Cotton, Rice, Maize</li>
+                <li><strong>Reasoning:</strong> Matches Telangana Black soil + 1100mm rainfall + Cotton/Rice pattern</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 5: Lower Confidence - Edge Case -->
+    <div class="test-case">
+        <h2>Test Case 5: Lower Confidence Edge Case</h2>
+        <div class="confidence-level medium">Expected Confidence: 45-55%</div>
+        
+        <div class="input-data">
+            <h3>📝 Input Data:</h3>
+            <code>
+            {<br>
+            &nbsp;&nbsp;"village": "Test Village Tamil Nadu",<br>
+            &nbsp;&nbsp;"latitude": 11.7833,<br>
+            &nbsp;&nbsp;"longitude": 77.8000,<br>
+            &nbsp;&nbsp;"soil_type": "Sandy",<br>
+            &nbsp;&nbsp;"annual_rainfall": 620,<br>
+            &nbsp;&nbsp;"crops_current": ["Cotton"],<br>
+            &nbsp;&nbsp;"groundwater_depth": 30,<br>
+            &nbsp;&nbsp;"flood_history": "No"<br>
+            }
+            </code>
+        </div>
+        
+        <div class="expected-output">
+            <h3>🎯 Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> Medium (45-55%) - Limited Sandy soil matches, Cotton matches, moderate rainfall matches</li>
+                <li><strong>Crop Recommendations:</strong> Cotton (with caution), Maize</li>
+                <li><strong>Reasoning:</strong> Sandy soil has fewer matches in dataset, but Cotton + 620mm rainfall has some matches</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; margin-top: 30px;">
+        <h2>📊 Dataset Compatibility Analysis</h2>
+        <p><strong>These inputs are designed based on actual dataset patterns:</strong></p>
+        <ul>
+            <li><strong>Soil Types:</strong> Black (most common), Red, Alluvial, Sandy, Loamy</li>
+            <li><strong>Rainfall Ranges:</strong> 550-1520mm (from dataset)</li>
+            <li><strong>Crop Types:</strong> Rice, Wheat, Cotton, Maize, Soybean, Sugarcane</li>
+            <li><strong>States Covered:</strong> Maharashtra, Karnataka, Telangana, Punjab, Tamil Nadu</li>
+        </ul>
+        
+        <p><strong>Confidence Calculation Logic:</strong></p>
+        <ul>
+            <li>Rainfall (60%): ±200mm tolerance for matches</li>
+            <li>Soil Type (25%): Exact matches required</li>
+            <li>Crops (15%): Exact + partial matches</li>
+            <li>Minimum 40% confidence threshold</li>
+        </ul>
+    </div>
+
+    <div style="background: #f3e5f5; padding: 20px; border-radius: 10px; margin-top: 20px;">
+        <h2>🧪 How to Test</h2>
+        <ol>
+            <li>Open the KOSMOS application at <code>http://localhost:3001</code></li>
+            <li>Fill the village form with any of the above input data</li>
+            <li>Submit and observe the confidence scores and crop recommendations</li>
+            <li>Verify that the system provides realistic outputs based on the dataset</li>
+            <li>Check that error handling works for insufficient data scenarios</li>
+        </ol>
+    </div>
+</body>
+</html>

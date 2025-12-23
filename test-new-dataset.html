@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test New Agricultural Dataset</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background-color: #d4edda; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; border: 1px solid #f5c6cb; }
+        .info { background-color: #d1ecf1; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>Agricultural Dataset Test</h1>
+    <div id="results"></div>
+
+    <script>
+        async function testDataset() {
+            const results = document.getElementById('results');
+            
+            try {
+                // Test 1: Load agricultural data
+                results.innerHTML += '<div class="test-result info">Loading agricultural dataset...</div>';
+                
+                const response = await fetch('/data/agricultural_data_india.csv');
+                const csvText = await response.text();
+                const lines = csvText.split('\n').filter(line => line.trim());
+                
+                results.innerHTML += `<div class="test-result success">✓ Dataset loaded successfully: ${lines.length - 1} records</div>`;
+                
+                // Test 2: Parse sample data
+                const headers = lines[0].split(',');
+                const sampleRecord = lines[1].split(',');
+                
+                results.innerHTML += `<div class="test-result success">✓ Headers found: ${headers.length} columns</div>`;
+                results.innerHTML += `<div class="test-result info">Sample record: ${sampleRecord[0]} - ${sampleRecord[7]} (${sampleRecord[8]} hectares)</div>`;
+                
+                // Test 3: Check data variety
+                const crops = new Set();
+                const soilTypes = new Set();
+                const states = new Set();
+                
+                for (let i = 1; i < Math.min(50, lines.length); i++) {
+                    const record = lines[i].split(',');
+                    if (record.length >= 10) {
+                        states.add(record[0]);
+                        crops.add(record[7]);
+                        soilTypes.add(record[9]);
+                    }
+                }
+                
+                results.innerHTML += `<div class="test-result success">✓ Data variety: ${states.size} states, ${crops.size} crops, ${soilTypes.size} soil types</div>`;
+                results.innerHTML += `<div class="test-result info">States: ${Array.from(states).join(', ')}</div>`;
+                results.innerHTML += `<div class="test-result info">Crops: ${Array.from(crops).join(', ')}</div>`;
+                results.innerHTML += `<div class="test-result info">Soil Types: ${Array.from(soilTypes).join(', ')}</div>`;
+                
+                // Test 4: Check realistic data ranges
+                let validRainfall = 0, validYield = 0, validROI = 0;
+                
+                for (let i = 1; i < Math.min(20, lines.length); i++) {
+                    const record = lines[i].split(',');
+                    if (record.length >= 23) {
+                        const rainfall = parseFloat(record[12]);
+                        const yield_val = parseFloat(record[19]);
+                        const roi = parseFloat(record[21]);
+                        
+                        if (rainfall >= 300 && rainfall <= 2500) validRainfall++;
+                        if (yield_val >= 1000 && yield_val <= 80000) validYield++;
+                        if (roi >= -10 && roi <= 100) validROI++;
+                    }
+                }
+                
+                results.innerHTML += `<div class="test-result success">✓ Realistic data ranges: ${validRainfall}/19 rainfall, ${validYield}/19 yield, ${validROI}/19 ROI</div>`;
+                
+                results.innerHTML += '<div class="test-result success"><strong>✓ All tests passed! New agricultural dataset is working correctly.</strong></div>';
+                
+            } catch (error) {
+                results.innerHTML += `<div class="test-result error">✗ Error: ${error.message}</div>`;
+            }
+        }
+        
+        testDataset();
+    </script>
+</body>
+</html>

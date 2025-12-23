@@ -34,7 +34,6 @@ const DataInsights: React.FC<DataInsightsProps> = ({ strategies, villageData, th
 
   // Confidence breakdown data for radial chart
   const confidenceBreakdownData = [
-    { name: 'Location', value: confidenceData.breakdown.location.score, fill: '#10b981' },
     { name: 'Soil', value: confidenceData.breakdown.soil.score, fill: '#3b82f6' },
     { name: 'Rainfall', value: confidenceData.breakdown.rainfall.score, fill: '#8b5cf6' },
     { name: 'Crops', value: confidenceData.breakdown.crops.score, fill: '#f59e0b' }
@@ -74,18 +73,6 @@ const DataInsights: React.FC<DataInsightsProps> = ({ strategies, villageData, th
           </div>
         </div>
 
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl">
-          <div className="flex items-center gap-2 mb-2">
-            <MapPin className="w-4 h-4 text-blue-600" />
-            <span className="text-xs font-bold text-blue-700 dark:text-blue-400">
-              LOCATION
-            </span>
-          </div>
-          <div className="text-2xl font-bold text-blue-600">
-            {confidenceData.breakdown.location.score}%
-          </div>
-        </div>
-
         <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-xl">
           <div className="flex items-center gap-2 mb-2">
             <Droplets className="w-4 h-4 text-purple-600" />
@@ -95,6 +82,18 @@ const DataInsights: React.FC<DataInsightsProps> = ({ strategies, villageData, th
           </div>
           <div className="text-2xl font-bold text-purple-600">
             {confidenceData.breakdown.rainfall.score}%
+          </div>
+        </div>
+
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl">
+          <div className="flex items-center gap-2 mb-2">
+            <Target className="w-4 h-4 text-blue-600" />
+            <span className="text-xs font-bold text-blue-700 dark:text-blue-400">
+              SOIL
+            </span>
+          </div>
+          <div className="text-2xl font-bold text-blue-600">
+            {confidenceData.breakdown.soil.score}%
           </div>
         </div>
 

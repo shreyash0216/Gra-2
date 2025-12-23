@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Detailed Test Inputs Based on Dataset</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f5f5f5;
+        }
+        .test-case { 
+            background: white;
+            margin: 20px 0; 
+            padding: 20px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .test-case h2 {
+            color: #2c5530;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .input-section {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .expected-section {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .dataset-match {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .confidence-badge {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        .high { background-color: #d4edda; color: #155724; }
+        .medium { background-color: #fff3cd; color: #856404; }
+        .low { background-color: #f8d7da; color: #721c24; }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            display: block;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌾 5 Detailed Test Inputs Based on Agricultural Dataset</h1>
+    <p><strong>Purpose:</strong> These test inputs are extracted from actual dataset patterns to ensure realistic and accurate testing.</p>
+
+    <!-- Test Case 1: Maharashtra Black Soil Rice -->
+    <div class="test-case">
+        <h2>Test Case 1: Maharashtra Black Soil Rice Pattern</h2>
+        <div class="confidence-badge high">Expected Confidence: 80-90%</div>
+        
+        <div class="input-section">
+            <h3>📝 Input Data:</h3>
+            <code>{
+  "village": "Khadki Test Village",
+  "latitude": 18.5626,
+  "longitude": 73.8087,
+  "soil_type": "Black",
+  "annual_rainfall": 1200,
+  "crops_current": ["Rice"],
+  "groundwater_depth": 15,
+  "flood_history": "No"
+}</code>
+            <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy JSON</button>
+        </div>
+        
+        <div class="dataset-match">
+            <h3>📊 Dataset Match:</h3>
+            <ul>
+                <li><strong>Exact Match:</strong> Maharashtra,Pune,Khadki,18.5626,73.8087,2023,Kharif,Rice,2.5,Black,7.2,35,1200,28</li>
+                <li><strong>Success Rating:</strong> 4/5 (Good performance)</li>
+                <li><strong>ROI:</strong> 18.5% (Moderate profitability)</li>
+                <li><strong>Farmer Feedback:</strong> "Good monsoon helped with decent yield but input costs were high"</li>
+            </ul>
+        </div>
+        
+        <div class="expected-section">
+            <h3>✅ Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> 80-90% (Perfect rainfall + soil + crop match)</li>
+                <li><strong>Top Crop Recommendations:</strong> Rice, Cotton, Sugarcane</li>
+                <li><strong>Planting Date:</strong> June-July (Kharif season)</li>
+                <li><strong>Irrigation:</strong> Drip irrigation recommended</li>
+                <li><strong>Risk Factor:</strong> Medium</li>
+                <li><strong>Expected Yield Improvement:</strong> 20-30%</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 2: Punjab Alluvial Wheat -->
+    <div class="test-case">
+        <h2>Test Case 2: Punjab Alluvial Wheat Pattern</h2>
+        <div class="confidence-badge high">Expected Confidence: 85-95%</div>
+        
+        <div class="input-section">
+            <h3>📝 Input Data:</h3>
+            <code>{
+  "village": "Pakhowal Test Village",
+  "latitude": 30.9010,
+  "longitude": 75.8573,
+  "soil_type": "Alluvial",
+  "annual_rainfall": 600,
+  "crops_current": ["Wheat"],
+  "groundwater_depth": 20,
+  "flood_history": "No"
+}</code>
+            <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy JSON</button>
+        </div>
+        
+        <div class="dataset-match">
+            <h3>📊 Dataset Match:</h3>
+            <ul>
+                <li><strong>Exact Match:</strong> Punjab,Ludhiana,Pakhowal,30.9010,75.8573,2023,Rabi,Wheat,5.2,Alluvial,7.4,42,600,18</li>
+                <li><strong>Success Rating:</strong> 5/5 (Excellent performance)</li>
+                <li><strong>ROI:</strong> 48.1% (High profitability)</li>
+                <li><strong>Farmer Feedback:</strong> "Excellent wheat crop with canal irrigation supporting high yields"</li>
+            </ul>
+        </div>
+        
+        <div class="expected-section">
+            <h3>✅ Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> 85-95% (Perfect match with high-performing record)</li>
+                <li><strong>Top Crop Recommendations:</strong> Wheat, Maize, Rice</li>
+                <li><strong>Planting Date:</strong> November-December (Rabi season)</li>
+                <li><strong>Irrigation:</strong> Canal irrigation recommended</li>
+                <li><strong>Risk Factor:</strong> Low</li>
+                <li><strong>Expected Yield Improvement:</strong> 20-30%</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 3: Karnataka Red Soil Cotton -->
+    <div class="test-case">
+        <h2>Test Case 3: Karnataka Red Soil Cotton Pattern</h2>
+        <div class="confidence-badge high">Expected Confidence: 75-85%</div>
+        
+        <div class="input-section">
+            <h3>📝 Input Data:</h3>
+            <code>{
+  "village": "Yelahanka Test Village",
+  "latitude": 13.1007,
+  "longitude": 77.5963,
+  "soil_type": "Red",
+  "annual_rainfall": 950,
+  "crops_current": ["Cotton"],
+  "groundwater_depth": 25,
+  "flood_history": "No"
+}</code>
+            <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy JSON</button>
+        </div>
+        
+        <div class="dataset-match">
+            <h3>📊 Dataset Match:</h3>
+            <ul>
+                <li><strong>Exact Match:</strong> Karnataka,Bangalore,Yelahanka,13.1007,77.5963,2023,Kharif,Cotton,4.1,Red,6.5,32,950,26</li>
+                <li><strong>Success Rating:</strong> 5/5 (Excellent performance)</li>
+                <li><strong>ROI:</strong> 55.4% (Very high profitability)</li>
+                <li><strong>Farmer Feedback:</strong> "Cotton performed exceptionally well despite moderate rainfall challenges"</li>
+            </ul>
+        </div>
+        
+        <div class="expected-section">
+            <h3>✅ Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> 75-85% (Strong match with excellent performance)</li>
+                <li><strong>Top Crop Recommendations:</strong> Cotton, Maize, Rice</li>
+                <li><strong>Planting Date:</strong> June-July (Kharif season)</li>
+                <li><strong>Irrigation:</strong> Flood irrigation or Drip</li>
+                <li><strong>Risk Factor:</strong> Medium</li>
+                <li><strong>Expected Yield Improvement:</strong> 15-25%</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 4: Telangana Multi-Crop -->
+    <div class="test-case">
+        <h2>Test Case 4: Telangana Black Soil Multi-Crop</h2>
+        <div class="confidence-badge medium">Expected Confidence: 70-80%</div>
+        
+        <div class="input-section">
+            <h3>📝 Input Data:</h3>
+            <code>{
+  "village": "Secunderabad Test Village",
+  "latitude": 17.4399,
+  "longitude": 78.4983,
+  "soil_type": "Black",
+  "annual_rainfall": 1100,
+  "crops_current": ["Cotton", "Rice"],
+  "groundwater_depth": 18,
+  "flood_history": "No"
+}</code>
+            <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy JSON</button>
+        </div>
+        
+        <div class="dataset-match">
+            <h3>📊 Dataset Match:</h3>
+            <ul>
+                <li><strong>Cotton Match:</strong> Telangana,Hyderabad,Secunderabad,17.4399,78.4983,2023,Kharif,Cotton,3.8,Black,7.1,38,1100,29</li>
+                <li><strong>Success Rating:</strong> 5/5 (Excellent performance)</li>
+                <li><strong>ROI:</strong> 84.3% (Exceptional profitability)</li>
+                <li><strong>Farmer Feedback:</strong> "Very satisfied with cotton yield and market demand was strong"</li>
+            </ul>
+        </div>
+        
+        <div class="expected-section">
+            <h3>✅ Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> 70-80% (Good match with multiple crop history)</li>
+                <li><strong>Top Crop Recommendations:</strong> Cotton, Rice, Maize</li>
+                <li><strong>Planting Date:</strong> June-July (Kharif season)</li>
+                <li><strong>Irrigation:</strong> Drip irrigation recommended</li>
+                <li><strong>Risk Factor:</strong> Medium</li>
+                <li><strong>Expected Yield Improvement:</strong> 20-30%</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test Case 5: Tamil Nadu High Rainfall Rice -->
+    <div class="test-case">
+        <h2>Test Case 5: Tamil Nadu High Rainfall Rice Pattern</h2>
+        <div class="confidence-badge medium">Expected Confidence: 65-75%</div>
+        
+        <div class="input-section">
+            <h3>📝 Input Data:</h3>
+            <code>{
+  "village": "Tambaram Test Village",
+  "latitude": 12.9249,
+  "longitude": 80.1000,
+  "soil_type": "Alluvial",
+  "annual_rainfall": 1400,
+  "crops_current": ["Rice"],
+  "groundwater_depth": 12,
+  "flood_history": "Yes"
+}</code>
+            <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy JSON</button>
+        </div>
+        
+        <div class="dataset-match">
+            <h3>📊 Dataset Match:</h3>
+            <ul>
+                <li><strong>Exact Match:</strong> Tamil Nadu,Chennai,Tambaram,12.9249,80.1000,2023,Kharif,Rice,2.8,Alluvial,6.9,40,1400,30</li>
+                <li><strong>Success Rating:</strong> 4/5 (Good performance despite challenges)</li>
+                <li><strong>ROI:</strong> 79.0% (Very high profitability)</li>
+                <li><strong>Climate Risk:</strong> High (flooding history)</li>
+                <li><strong>Farmer Feedback:</strong> "Flooding affected some areas but overall rice production was good"</li>
+            </ul>
+        </div>
+        
+        <div class="expected-section">
+            <h3>✅ Expected Output:</h3>
+            <ul>
+                <li><strong>Confidence:</strong> 65-75% (Good match but flood risk consideration)</li>
+                <li><strong>Top Crop Recommendations:</strong> Rice, Sugarcane, Maize</li>
+                <li><strong>Planting Date:</strong> June-July (Kharif season)</li>
+                <li><strong>Irrigation:</strong> Canal irrigation with drainage</li>
+                <li><strong>Risk Factor:</strong> High (due to flood history)</li>
+                <li><strong>Expected Yield Improvement:</strong> 15-25%</li>
+                <li><strong>Special Note:</strong> Flood management strategies recommended</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background: #e8f5e8; padding: 20px; border-radius: 10px; margin-top: 30px;">
+        <h2>📊 Dataset Analysis Summary</h2>
+        <p><strong>These inputs are based on actual dataset records:</strong></p>
+        <ul>
+            <li><strong>States Covered:</strong> Maharashtra, Punjab, Karnataka, Telangana, Tamil Nadu</li>
+            <li><strong>Soil Types:</strong> Black (most common), Red, Alluvial, Sandy, Loamy</li>
+            <li><strong>Rainfall Range:</strong> 550mm - 1520mm (from actual data)</li>
+            <li><strong>Crop Types:</strong> Rice, Wheat, Cotton, Maize, Soybean, Sugarcane</li>
+            <li><strong>Success Ratings:</strong> 3-5 (only successful crops included)</li>
+            <li><strong>ROI Range:</strong> 4% - 104% (realistic profitability)</li>
+        </ul>
+        
+        <p><strong>Confidence Calculation Logic:</strong></p>
+        <ul>
+            <li><strong>Rainfall (60%):</strong> ±200mm tolerance for exact matches</li>
+            <li><strong>Soil Type (25%):</strong> Exact matches preferred, similar types as fallback</li>
+            <li><strong>Crops (15%):</strong> Exact + partial matches with crop history</li>
+            <li><strong>Minimum Threshold:</strong> 25% confidence (with fallback mechanisms)</li>
+        </ul>
+    </div>
+
+    <div style="background: #fff3e0; padding: 20px; border-radius: 10px; margin-top: 20px;">
+        <h2>🧪 Testing Instructions</h2>
+        <ol>
+            <li><strong>Open KOSMOS App:</strong> Navigate to <code>http://localhost:3001</code></li>
+            <li><strong>Copy Input:</strong> Use the "Copy JSON" buttons above</li>
+            <li><strong>Fill Form:</strong> Enter the values in the village data form</li>
+            <li><strong>Submit:</strong> Click submit and observe results</li>
+            <li><strong>Verify:</strong> Check confidence scores and crop recommendations match expectations</li>
+        </ol>
+        
+        <p><strong>Expected Behavior:</strong></p>
+        <ul>
+            <li>✅ No error messages (fallback mechanisms working)</li>
+            <li>✅ Confidence scores in expected ranges</li>
+            <li>✅ Realistic crop recommendations</li>
+            <li>✅ Appropriate planting dates and irrigation suggestions</li>
+            <li>✅ Risk factors based on historical data</li>
+        </ul>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Show temporary success message
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.backgroundColor = '#28a745';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.backgroundColor = '#4CAF50';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
