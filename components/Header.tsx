@@ -13,8 +13,22 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, user, onLogin }) =>
     <header className="sticky top-0 z-50 w-full bg-parchment-100/80 dark:bg-navy-950/80 backdrop-blur-md border-b border-parchment-300 dark:border-slate-800 transition-colors">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.location.reload()}>
-          <div className="w-10 h-10 bg-navy-900 dark:bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg transition-transform group-hover:scale-110">
-            G
+          <div className="w-10 h-10 rounded-xl shadow-lg transition-transform group-hover:scale-110 overflow-hidden bg-white dark:bg-navy-800 border border-parchment-200 dark:border-slate-700">
+            <img 
+              src="/logo_GRA.jpeg" 
+              alt="GRA Logo" 
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                // Fallback to text if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const parent = target.parentElement;
+                if (parent) {
+                  parent.className = "w-10 h-10 bg-navy-900 dark:bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg transition-transform group-hover:scale-110";
+                  parent.innerHTML = 'G';
+                }
+              }}
+            />
           </div>
           <div>
             <span className="font-display font-extrabold text-2xl tracking-tight text-navy-900 dark:text-white">GRA</span>

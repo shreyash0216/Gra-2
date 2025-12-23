@@ -8,6 +8,7 @@ import {
   ChevronDown, ChevronUp, FileText, Package
 } from 'lucide-react';
 import VisualBlueprint from './VisualBlueprint';
+import DataInsights from './DataInsights';
 
 interface Props {
   plan: AdaptationPlan;
@@ -213,119 +214,130 @@ const Dashboard: React.FC<Props> = ({ plan, data, onReset, theme }) => {
         </div>
       </div>
 
-      {/* Main Grid Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      {/* Main Grid Section - Improved Layout */}
+      <div className="grid grid-cols-1 xl:grid-cols-12 gap-8">
         
-        {/* Left Column: Strategies & Blueprints */}
-        <div className="lg:col-span-8 space-y-12">
+        {/* Left Column: Strategies & Blueprints - Better Spacing */}
+        <div className="xl:col-span-8 space-y-10">
           
-          {/* Strategy Deep Dive */}
-          <div className="bg-white dark:bg-navy-900 p-12 rounded-[3.5rem] border border-parchment-200 dark:border-slate-800 shadow-sm">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 bg-emerald-600 rounded-3xl flex items-center justify-center text-white shadow-lg">
-                <Info className="w-8 h-8" />
+          {/* Strategy Deep Dive - Cleaner Design */}
+          <div className="bg-white dark:bg-navy-900 p-8 rounded-3xl border border-parchment-200 dark:border-slate-800 shadow-sm">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                <Info className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Detailed Analysis</h3>
-                <p className="text-3xl font-serif font-bold text-navy-900 dark:text-white">{activeStrategy.focus}</p>
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Strategy Analysis</h3>
+                <p className="text-2xl font-serif font-bold text-navy-900 dark:text-white">{activeStrategy.focus}</p>
               </div>
             </div>
-            <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-10 border-l-4 border-emerald-500 pl-8 italic">
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 border-l-4 border-emerald-500 pl-6 italic">
               {activeStrategy.summary}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="p-8 bg-parchment-50 dark:bg-navy-800/50 rounded-3xl border border-parchment-200 dark:border-slate-700">
-                <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-6">Prescriptive Crop Matrix</h4>
-                <div className="space-y-4">
+            
+            {/* Improved Grid Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="p-6 bg-parchment-50 dark:bg-navy-800/50 rounded-2xl border border-parchment-200 dark:border-slate-700">
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <Leaf className="w-4 h-4 text-emerald-500" />
+                  Recommended Crops
+                </h4>
+                <div className="space-y-3">
                   {activeStrategy.crops.map((crop, idx) => (
-                    <div key={idx} className="p-4 bg-white dark:bg-navy-950 rounded-2xl border border-parchment-200 dark:border-slate-800 hover:scale-[1.02] transition-transform shadow-sm">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-serif font-bold text-navy-900 dark:text-white">{crop.name}</span>
-                        <span className={`text-[10px] font-black px-2 py-0.5 rounded ${crop.risk_factor === 'Low' ? 'bg-emerald-100 text-emerald-700' : 'bg-orange-100 text-orange-700'}`}>{crop.risk_factor} RISK</span>
+                    <div key={idx} className="p-3 bg-white dark:bg-navy-950 rounded-xl border border-parchment-200 dark:border-slate-800 hover:scale-[1.01] transition-transform shadow-sm">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="font-semibold text-navy-900 dark:text-white text-sm">{crop.name}</span>
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${crop.risk_factor === 'Low' ? 'bg-emerald-100 text-emerald-700' : 'bg-orange-100 text-orange-700'}`}>
+                          {crop.risk_factor} RISK
+                        </span>
                       </div>
                       <div className="flex justify-between text-xs text-slate-500">
                         <span>{crop.planting_date}</span>
-                        <span className="font-bold text-emerald-600">{crop.expected_yield_improvement}</span>
+                        <span className="font-semibold text-emerald-600">{crop.expected_yield_improvement}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="p-8 bg-parchment-50 dark:bg-navy-800/50 rounded-3xl border border-parchment-200 dark:border-slate-700">
-                <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-6">Investment Blueprint</h4>
+              
+              <div className="p-6 bg-parchment-50 dark:bg-navy-800/50 rounded-2xl border border-parchment-200 dark:border-slate-700">
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <Construction className="w-4 h-4 text-emerald-500" />
+                  Investment Summary
+                </h4>
                 <div className="space-y-4">
-                   <div className="flex justify-between items-center p-6 bg-navy-900 text-white rounded-2xl">
-                     <span className="text-sm opacity-60">Total Budget</span>
-                     <span className="text-2xl font-serif font-black text-emerald-400">₹{activeStrategy.total_investment.toLocaleString()}</span>
+                   <div className="flex justify-between items-center p-4 bg-navy-900 text-white rounded-xl">
+                     <span className="text-sm opacity-70">Total Budget</span>
+                     <span className="text-xl font-bold text-emerald-400">₹{activeStrategy.total_investment.toLocaleString()}</span>
                    </div>
-                   <p className="text-[11px] text-slate-400 leading-relaxed italic">
-                     *Cost estimates are based on local material availability and labor mandates as of Q1 2025.
+                   <p className="text-xs text-slate-400 leading-relaxed">
+                     Cost estimates based on Q1 2025 market rates and local availability.
                    </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Visual Blueprints (Slide 3 Point 2 Reference) */}
-          <div className="space-y-8">
-            <div className="flex items-center gap-4 px-6">
-               <Layers className="w-8 h-8 text-emerald-600" />
-               <h3 className="text-4xl font-serif font-bold dark:text-white">Visual Blueprints & Maps</h3>
+          {/* Visual Blueprints - Cleaner Header */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+               <Layers className="w-6 h-6 text-emerald-600" />
+               <h3 className="text-3xl font-serif font-bold dark:text-white">Implementation Blueprints</h3>
             </div>
             {activeStrategy.blueprints.map(renderBlueprint)}
           </div>
 
-          {/* Technical Reference Library (Concise Collapsible Summaries) */}
-          <div className="space-y-8 mt-16 animate-in slide-in-from-bottom-4 duration-700">
-            <div className="flex items-center gap-4 px-6">
-               <FileText className="w-8 h-8 text-emerald-600" />
-               <h3 className="text-4xl font-serif font-bold dark:text-white">Technical Reference Library</h3>
+          {/* Technical Reference Library - Improved Spacing */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+               <FileText className="w-6 h-6 text-emerald-600" />
+               <h3 className="text-3xl font-serif font-bold dark:text-white">Technical Documentation</h3>
             </div>
-            <div className="bg-white dark:bg-navy-900 rounded-[3rem] border border-parchment-200 dark:border-slate-800 overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-navy-900 rounded-2xl border border-parchment-200 dark:border-slate-800 overflow-hidden shadow-sm">
               {activeStrategy.blueprints.map((bp, idx) => (
                 <div key={`summary-${bp.id}`} className={`border-b border-parchment-100 dark:border-slate-800 last:border-b-0`}>
                   <button 
                     onClick={() => setExpandedSummaryId(expandedSummaryId === bp.id ? null : bp.id)}
-                    className="w-full flex items-center justify-between p-8 hover:bg-parchment-50 dark:hover:bg-white/5 transition-colors text-left"
+                    className="w-full flex items-center justify-between p-6 hover:bg-parchment-50 dark:hover:bg-white/5 transition-colors text-left"
                   >
-                    <div className="flex items-center gap-6">
-                      <div className="w-12 h-12 bg-parchment-100 dark:bg-navy-800 rounded-2xl flex items-center justify-center text-emerald-600">
-                        <Construction className="w-6 h-6" />
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-parchment-100 dark:bg-navy-800 rounded-xl flex items-center justify-center text-emerald-600">
+                        <Construction className="w-5 h-5" />
                       </div>
                       <div>
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tech Ref: 0{idx+1}</span>
-                        <h4 className="text-xl font-bold text-navy-900 dark:text-white">{bp.title}</h4>
+                        <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Reference {idx+1}</span>
+                        <h4 className="text-lg font-semibold text-navy-900 dark:text-white">{bp.title}</h4>
                       </div>
                     </div>
                     <div className="p-2 rounded-full bg-parchment-100 dark:bg-navy-800">
-                      {expandedSummaryId === bp.id ? <ChevronUp className="w-5 h-5 text-emerald-600" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
+                      {expandedSummaryId === bp.id ? <ChevronUp className="w-4 h-4 text-emerald-600" /> : <ChevronDown className="w-4 h-4 text-slate-400" />}
                     </div>
                   </button>
                   
                   {expandedSummaryId === bp.id && (
-                    <div className="px-8 pb-10 pt-2 grid grid-cols-1 md:grid-cols-2 gap-10 animate-in slide-in-from-top-2 duration-300">
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-                          <ListChecks className="w-4 h-4" /> Engineering Specs
+                    <div className="px-6 pb-6 pt-2 grid grid-cols-1 md:grid-cols-2 gap-6 animate-in slide-in-from-top-2 duration-300">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                          <ListChecks className="w-4 h-4" /> Technical Specifications
                         </div>
-                        <ul className="space-y-3">
+                        <ul className="space-y-2">
                           {bp.technical_specs.map((spec, i) => (
                             <li key={i} className="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
-                              <span className="w-5 h-5 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-[10px] font-bold text-emerald-600 shrink-0 mt-0.5">•</span>
+                              <span className="w-4 h-4 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-xs font-bold text-emerald-600 shrink-0 mt-0.5">•</span>
                               {spec}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-                          <Package className="w-4 h-4" /> Material Checklist
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                          <Package className="w-4 h-4" /> Materials Required
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 gap-2">
                           {bp.material_list.map((m, i) => (
-                            <div key={i} className="p-3 bg-parchment-50 dark:bg-navy-800 rounded-xl border border-parchment-100 dark:border-slate-700 flex flex-col">
-                              <span className="text-xs font-bold text-navy-900 dark:text-white">{m.name}</span>
-                              <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono mt-1">{m.quantity}</span>
+                            <div key={i} className="p-3 bg-parchment-50 dark:bg-navy-800 rounded-lg border border-parchment-100 dark:border-slate-700 flex justify-between items-center">
+                              <span className="text-sm font-semibold text-navy-900 dark:text-white">{m.name}</span>
+                              <span className="text-xs text-emerald-600 dark:text-emerald-400 font-mono bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded">{m.quantity}</span>
                             </div>
                           ))}
                         </div>
@@ -336,30 +348,36 @@ const Dashboard: React.FC<Props> = ({ plan, data, onReset, theme }) => {
               ))}
             </div>
           </div>
-
         </div>
 
-        {/* Right Column: Financials & RAG Grounding */}
-        <div className="lg:col-span-4 space-y-12">
+        {/* Right Column: Financials & Data Insights - Better Organization */}
+        <div className="xl:col-span-4 space-y-8">
           
-          {/* Realistic Cost Estimates (Slide 3 Point 3 Reference) */}
-          <div className="bg-white dark:bg-navy-900 p-10 rounded-[3.5rem] border border-parchment-200 dark:border-slate-800 shadow-sm">
-            <h3 className="text-xl font-serif font-bold mb-8 flex items-center gap-3 dark:text-white">
-              <Construction className="w-6 h-6 text-emerald-600" />
-              Structural Budget
+          {/* Data Insights - Moved to Top */}
+          <DataInsights 
+            strategies={plan.strategies} 
+            villageData={data} 
+            theme={theme} 
+          />
+          
+          {/* Cost Analysis - Cleaner Design */}
+          <div className="bg-white dark:bg-navy-900 p-6 rounded-2xl border border-parchment-200 dark:border-slate-800 shadow-sm">
+            <h3 className="text-lg font-semibold mb-6 flex items-center gap-3 dark:text-white">
+              <Construction className="w-5 h-5 text-emerald-600" />
+              Cost Breakdown
             </h3>
-            <div className="h-[250px] w-full mb-10">
+            <div className="h-[200px] w-full mb-6">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData} layout="vertical">
                   <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke={isDark ? '#334155' : '#e2e8f0'} />
                   <XAxis type="number" hide />
-                  <YAxis dataKey="name" type="category" width={100} style={{ fontSize: '10px', fill: isDark ? '#94a3b8' : '#64748b' }} />
+                  <YAxis dataKey="name" type="category" width={80} style={{ fontSize: '10px', fill: isDark ? '#94a3b8' : '#64748b' }} />
                   <Tooltip
-                    contentStyle={{ backgroundColor: isDark ? '#1e293b' : '#ffffff', border: 'none', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+                    contentStyle={{ backgroundColor: isDark ? '#1e293b' : '#ffffff', border: 'none', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
                     itemStyle={{ color: isDark ? '#f1f5f9' : '#1e293b', fontSize: '12px' }}
                     formatter={(value: number) => `₹${value.toLocaleString()}`}
                   />
-                  <Bar dataKey="cost" radius={[0, 10, 10, 0]}>
+                  <Bar dataKey="cost" radius={[0, 8, 8, 0]}>
                     {chartData.map((_, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
@@ -367,57 +385,58 @@ const Dashboard: React.FC<Props> = ({ plan, data, onReset, theme }) => {
                 </BarChart>
               </ResponsiveContainer>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {activeStrategy.structures.map((s, i) => (
-                <div key={i} className="flex justify-between items-center p-4 bg-parchment-50 dark:bg-navy-800 rounded-2xl border border-parchment-100 dark:border-slate-800">
+                <div key={i} className="flex justify-between items-center p-3 bg-parchment-50 dark:bg-navy-800 rounded-xl border border-parchment-100 dark:border-slate-800">
                   <div>
-                    <span className="block text-[10px] font-black text-slate-400 uppercase tracking-widest">{s.location_type}</span>
-                    <span className="font-bold text-navy-900 dark:text-slate-200">{s.name}</span>
+                    <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider">{s.location_type}</span>
+                    <span className="font-semibold text-navy-900 dark:text-slate-200 text-sm">{s.name}</span>
                   </div>
-                  <span className="text-sm font-black text-emerald-600 dark:text-emerald-400">₹{s.estimated_cost.toLocaleString()}</span>
+                  <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">₹{s.estimated_cost.toLocaleString()}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RAG Grounding Section (Slide 4 Reference) */}
-          <div className="bg-parchment-100 dark:bg-navy-900/40 p-10 rounded-[3.5rem] border border-parchment-200 dark:border-slate-800">
-            <h4 className="text-xs font-black text-navy-900 dark:text-slate-400 uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-               <Globe className="w-4 h-4" /> RAG Grounding Engine
-            </h4>
-            <div className="space-y-3">
-              {plan.sources?.map((src, i) => (
-                <a
-                  key={i}
-                  href={src.uri}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block p-4 bg-white dark:bg-navy-900 border border-parchment-300 dark:border-slate-800 rounded-2xl hover:border-emerald-500 transition-all shadow-sm"
-                >
-                  <p className="text-sm font-bold text-navy-900 dark:text-slate-200 truncate group-hover:text-emerald-600">{src.title}</p>
-                  <div className="mt-2 flex items-center justify-between text-[10px] text-slate-400">
-                    <span className="uppercase tracking-widest">External Data Node</span>
-                    <ChevronRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Live Climate Badge */}
-          <div className="p-8 bg-emerald-600 text-white rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity"></div>
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 bg-white/20 rounded-2xl backdrop-blur-md">
-                <Zap className="w-6 h-6" />
+          {/* System Status - Cleaner Badge */}
+          <div className="p-6 bg-emerald-600 text-white rounded-2xl shadow-lg relative overflow-hidden">
+            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-5 transition-opacity"></div>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="p-2 bg-white/20 rounded-xl backdrop-blur-md">
+                <Zap className="w-5 h-5" />
               </div>
-              <p className="font-serif font-bold text-xl leading-tight">Dynamic Simulation Active</p>
+              <p className="font-bold text-lg">AI System Active</p>
             </div>
-            <p className="text-sm text-emerald-100 leading-relaxed opacity-80">
-              Plan verified against historic watershed projects and current 2025 IMD regional forecasts for this ward.
+            <p className="text-sm text-emerald-100 leading-relaxed opacity-90">
+              Predictions validated against 2025 climate data and historical watershed projects.
             </p>
           </div>
 
+          {/* GRA Branding - Subtle Watermark */}
+          <div className="p-4 bg-white dark:bg-navy-900 rounded-2xl border border-parchment-200 dark:border-slate-800 shadow-sm">
+            <div className="flex items-center gap-3 opacity-60">
+              <div className="w-8 h-8 rounded-lg overflow-hidden bg-parchment-100 dark:bg-navy-800">
+                <img 
+                  src="/logo_GRA.jpeg" 
+                  alt="GRA Logo" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.className = "w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold";
+                      parent.innerHTML = 'G';
+                    }
+                  }}
+                />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-navy-900 dark:text-white">Powered by GRA</p>
+                <p className="text-[10px] text-slate-400">Team COSMOS • v1.0</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

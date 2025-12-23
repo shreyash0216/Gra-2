@@ -219,7 +219,25 @@ const App: React.FC = () => {
             <div className="relative w-40 h-40 mx-auto mb-12">
               <div className="absolute inset-0 border-8 border-parchment-200 dark:border-navy-800 rounded-full"></div>
               <div className="absolute inset-0 border-8 border-navy-900 dark:border-emerald-500 rounded-full border-t-transparent animate-spin"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-5xl">⚡</div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full overflow-hidden bg-white dark:bg-navy-800 border-4 border-white dark:border-navy-700 shadow-lg">
+                  <img 
+                    src="/logo_GRA.jpeg" 
+                    alt="GRA Logo" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to emoji if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.className = "w-20 h-20 rounded-full bg-emerald-600 flex items-center justify-center text-4xl";
+                        parent.innerHTML = '⚡';
+                      }
+                    }}
+                  />
+                </div>
+              </div>
             </div>
             <h2 className="text-4xl font-serif font-bold mb-4 text-navy-900 dark:text-white">Synthesizing GRA Plan</h2>
             <p className="text-slate-500 dark:text-slate-400 italic">Accessing regional datasets & running Monte Carlo simulations...</p>
@@ -274,7 +292,23 @@ const App: React.FC = () => {
       <footer className="bg-navy-950 text-white/60 py-20 px-4 mt-20">
         <div className="container mx-auto max-w-5xl text-center space-y-8">
           <div className="flex justify-center items-center gap-3 text-white font-black text-3xl">
-            <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center">G</div>
+            <div className="w-10 h-10 rounded-xl overflow-hidden bg-white border border-white/20">
+              <img 
+                src="/logo_GRA.jpeg" 
+                alt="GRA Logo" 
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback to text if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.className = "w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center";
+                    parent.innerHTML = 'G';
+                  }
+                }}
+              />
+            </div>
             GRA
           </div>
           <p className="text-xl font-serif italic max-w-2xl mx-auto">“Empowering India with precise, local climate action.”</p>

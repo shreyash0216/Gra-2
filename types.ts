@@ -48,6 +48,7 @@ export interface Strategy {
   structures: Structure[];
   blueprints: Blueprint[];
   total_investment: number;
+  confidence_score?: number; // Added for data-driven confidence
 }
 
 export interface AdaptationPlan {

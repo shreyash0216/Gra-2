@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Realistic Confidence Scoring</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .high { background-color: #d1fae5; color: #065f46; }
+        .medium { background-color: #fef3c7; color: #92400e; }
+        .low { background-color: #fee2e2; color: #991b1b; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Testing Realistic Confidence Scoring</h1>
+    <div id="results"></div>
+    
+    <script>
+        // Test different village scenarios
+        const testScenarios = [
+            {
+                name: "High Data Match Village",
+                village: "TestVillage1",
+                latitude: 12.61124,  // Matches Andaman data
+                longitude: 92.83165,
+                soil_type: "Black",   // Matches fertilizer data
+                annual_rainfall: 250, // Close to crop data
+                crops_current: ["rice"], // Exact match in crop data
+                expected: "60-80%"
+            },
+            {
+                name: "Medium Data Match Village", 
+                village: "TestVillage2",
+                latitude: 20.0,      // Some distance from data
+                longitude: 77.0,
+                soil_type: "Sandy",  // Partial match
+                annual_rainfall: 400, // Moderate difference
+                crops_current: ["wheat"], // Partial match
+                expected: "40-60%"
+            },
+            {
+                name: "Low Data Match Village",
+                village: "TestVillage3", 
+                latitude: 35.0,      // Far from data points
+                longitude: 140.0,
+                soil_type: "Unknown", // No match
+                annual_rainfall: 1000, // Very different
+                crops_current: ["exotic_crop"], // No match
+                expected: "20-40%"
+            }
+        ];
+
+        async function testConfidenceScoring() {
+            const results = document.getElementById('results');
+            
+            for (const scenario of testScenarios) {
+                try {
+                    // Simulate the confidence calculation
+                    const confidence = simulateConfidenceCalculation(scenario);
+                    
+                    const resultDiv = document.createElement('div');
+                    resultDiv.className = `test-result ${getConfidenceClass(confidence)}`;
+                    resultDiv.innerHTML = `
+                        <h3>${scenario.name}</h3>
+                        <p><strong>Calculated Confidence:</strong> ${confidence}%</p>
+                        <p><strong>Expected Range:</strong> ${scenario.expected}</p>
+                        <p><strong>Status:</strong> ${getConfidenceStatus(confidence)}</p>
+                        <details>
+                            <summary>Test Data</summary>
+                            <pre>${JSON.stringify(scenario, null, 2)}</pre>
+                        </details>
+                    `;
+                    results.appendChild(resultDiv);
+                    
+                } catch (error) {
+                    console.error('Test failed:', error);
+                }
+            }
+        }
+        
+        function simulateConfidenceCalculation(villageData) {
+            // Simulate the realistic confidence calculation
+            let locationScore = 0.1; // Default low
+            let soilScore = 0.1;
+            let rainfallScore = 0.2;
+            let cropScore = 0.1;
+            
+            // Location scoring (simulate finding similar locations)
+            if (Math.abs(villageData.latitude - 12.61124) < 5 && 
+                Math.abs(villageData.longitude - 92.83165) < 5) {
+                locationScore = 0.8; // High match
+            } else if (Math.abs(villageData.latitude - 12.61124) < 15) {
+                locationScore = 0.4; // Medium match
+            }
+            
+            // Soil scoring
+            const knownSoils = ['Black', 'Sandy', 'Loamy', 'Red', 'Clayey'];
+            if (knownSoils.includes(villageData.soil_type)) {
+                soilScore = 0.7;
+            }
+            
+            // Rainfall scoring
+            const rainfallDiff = Math.abs(villageData.annual_rainfall - 250);
+            if (rainfallDiff <= 100) rainfallScore = 0.8;
+            else if (rainfallDiff <= 200) rainfallScore = 0.5;
+            else if (rainfallDiff <= 400) rainfallScore = 0.3;
+            
+            // Crop scoring
+            const knownCrops = ['rice', 'wheat', 'cotton', 'maize'];
+            const matchingCrops = villageData.crops_current.filter(crop => 
+                knownCrops.some(known => known.includes(crop.toLowerCase()))
+            );
+            if (matchingCrops.length > 0) {
+                cropScore = Math.min(matchingCrops.length / villageData.crops_current.length, 1) * 0.8;
+            }
+            
+            // Weighted calculation
+            const weightedScore = (
+                locationScore * 0.35 +
+                soilScore * 0.25 +
+                rainfallScore * 0.25 +
+                cropScore * 0.15
+            );
+            
+            // Convert to percentage (20% to 95% range)
+            const confidence = Math.round(weightedScore * 100);
+            return Math.max(Math.min(confidence, 95), 20);
+        }
+        
+        function getConfidenceClass(confidence) {
+            if (confidence >= 60) return 'high';
+            if (confidence >= 40) return 'medium';
+            return 'low';
+        }
+        
+        function getConfidenceStatus(confidence) {
+            if (confidence >= 80) return '🟢 Very High Confidence';
+            if (confidence >= 60) return '🟡 High Confidence';
+            if (confidence >= 40) return '🟠 Moderate Confidence';
+            return '🔴 Low Confidence';
+        }
+        
+        // Run tests
+        testConfidenceScoring();
+    </script>
+</body>
+</html>

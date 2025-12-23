@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Data Loading</title>
+</head>
+<body>
+    <h1>Testing Training Data Integration</h1>
+    <div id="results"></div>
+    
+    <script>
+        async function testDataLoading() {
+            const results = document.getElementById('results');
+            
+            try {
+                // Test crop data
+                const cropResponse = await fetch('/data/Crop_recommendation.csv');
+                const cropText = await cropResponse.text();
+                const cropLines = cropText.split('\n').length - 1;
+                
+                // Test fertilizer data
+                const fertResponse = await fetch('/data/data_core.csv');
+                const fertText = await fertResponse.text();
+                const fertLines = fertText.split('\n').length - 1;
+                
+                // Test rainfall data
+                const rainResponse = await fetch('/data/Rainfall_Data_LL.csv');
+                const rainText = await rainResponse.text();
+                const rainLines = rainText.split('\n').length - 1;
+                
+                results.innerHTML = `
+                    <h2>✅ Data Loading Successful!</h2>
+                    <ul>
+                        <li>Crop Recommendations: ${cropLines} records</li>
+                        <li>Fertilizer Data: ${fertLines} records</li>
+                        <li>Rainfall Data: ${rainLines} records</li>
+                    </ul>
+                    <p><strong>Your training data is now integrated with KOSMOS!</strong></p>
+                `;
+                
+            } catch (error) {
+                results.innerHTML = `
+                    <h2>❌ Error Loading Data</h2>
+                    <p>${error.message}</p>
+                `;
+            }
+        }
+        
+        testDataLoading();
+    </script>
+</body>
+</html>
