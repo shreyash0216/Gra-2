@@ -313,7 +313,7 @@ const App: React.FC = () => {
           </div>
           <p className="text-xl font-serif italic max-w-2xl mx-auto">“Empowering India with precise, local climate action.”</p>
           <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>© 2025 Team COSMOS. Powered by Claude/Bedrock & Gemini RAG.</p>
+            <p>© 2025 GRA. Powered by Claude/Bedrock & Gemini RAG.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-emerald-400">Methodology</a>
               <a href="#" className="hover:text-emerald-400">AWS ImpactX</a>

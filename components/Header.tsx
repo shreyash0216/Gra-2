@@ -36,12 +36,6 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, user, onLogin }) =>
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 font-medium text-slate-600 dark:text-slate-300">
-          <a href="#" className="hover:text-emerald-600 transition-colors">Core Agent</a>
-          <a href="#" className="hover:text-emerald-600 transition-colors">Impact Studies</a>
-          <a href="#" className="hover:text-emerald-600 transition-colors">Team COSMOS</a>
-        </nav>
-
         <div className="flex items-center gap-2 sm:gap-4">
           <button
             onClick={toggleTheme}
@@ -64,14 +58,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, user, onLogin }) =>
                 {user.name.charAt(0)}
               </div>
             </div>
-          ) : (
-            <button
-              onClick={onLogin}
-              className="px-4 py-2 bg-navy-900 dark:bg-emerald-600 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-colors shadow-sm"
-            >
-              Researcher Login
-            </button>
-          )}
+          ) : null}
         </div>
       </div>
     </header>

@@ -398,7 +398,7 @@ const Dashboard: React.FC<Props> = ({ plan, data, theme }) => {
               </div>
               <div>
                 <p className="text-xs font-bold text-navy-900 dark:text-white">Powered by GRA</p>
-                <p className="text-[10px] text-slate-400">Team COSMOS • v1.0</p>
+                <p className="text-[10px] text-slate-400">v1.0</p>
               </div>
             </div>
           </div>
