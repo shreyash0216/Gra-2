@@ -177,15 +177,6 @@ const App: React.FC = () => {
                   ))}
                 </div>
               </div>
-              <div className="bg-navy-950 p-8 rounded-3xl text-white">
-                <p className="text-sm font-bold text-emerald-400 uppercase tracking-widest mb-4">The Result:</p>
-                <p className="text-2xl font-serif leading-relaxed">
-                  Bad decisions &rarr; <br/> 
-                  Crop losses &rarr; <br/> 
-                  Water wastage &rarr; <br/> 
-                  <span className="text-red-400">Higher climate vulnerability.</span>
-                </p>
-              </div>
             </div>
 
             {/* Team Section */}
