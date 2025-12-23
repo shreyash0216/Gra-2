@@ -163,7 +163,7 @@ const App: React.FC = () => {
             {/* Problem-Solution Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white dark:bg-navy-900/50 p-12 rounded-[3rem] border border-parchment-200 dark:border-slate-800">
               <div>
-                <h2 className="text-4xl font-serif font-bold text-navy-900 dark:text-white mb-6">Climate change hits locally... <span className="text-emerald-600">but our solutions don't.</span></h2>
+                <h2 className="text-4xl font-serif font-bold text-navy-900 dark:text-white mb-6">Local climate problems need local, actionable solutions.</h2>
                 <div className="space-y-4">
                   <div className="flex gap-4 items-start">
                     <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-xs font-bold shrink-0">01</div>
