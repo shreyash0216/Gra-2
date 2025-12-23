@@ -1,6 +1,6 @@
 import React from 'react';
 import { Strategy } from '../types';
-import { Calculator, IndianRupee, Package, Clock, TrendingUp } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 
 interface BudgetItem {
   item: string;
@@ -106,8 +106,6 @@ const BudgetBreakdown: React.FC<BudgetBreakdownProps> = ({ strategy, theme }) =>
   };
 
   const budgetItems = generateBudgetItems();
-  // Use strategy total_investment as the definitive total
-  const totalEstimatedCost = strategy.total_investment;
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -200,89 +198,6 @@ const BudgetBreakdown: React.FC<BudgetBreakdownProps> = ({ strategy, theme }) =>
           ))}
         </div>
 
-        {/* Total Row - Enhanced Visibility */}
-        <div className="bg-gradient-to-r from-navy-900 to-emerald-900 text-white px-8 py-6 shadow-lg">
-          <div className="grid grid-cols-12 gap-4 items-center">
-            <div className="col-span-8">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-emerald-500/20 rounded-xl">
-                  <IndianRupee className="w-6 h-6 text-emerald-400" />
-                </div>
-                <span className="text-xl font-bold">Total Estimated Cost</span>
-              </div>
-            </div>
-            <div className="col-span-4 text-right">
-              <div className="bg-emerald-500/10 rounded-2xl px-6 py-3 border border-emerald-400/30">
-                <span className="text-3xl font-black text-emerald-400 tracking-tight">
-                  ₹{strategy.total_investment.toLocaleString()}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Budget Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-        <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800">
-          <div className="flex items-center gap-2 mb-2">
-            <Package className="w-4 h-4 text-emerald-600" />
-            <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
-              Materials & Seeds
-            </span>
-          </div>
-          <div className="text-xl font-bold text-emerald-600">
-            ₹{budgetItems
-              .filter(item => ['seeds', 'materials'].includes(item.category))
-              .reduce((sum, item) => sum + item.total, 0)
-              .toLocaleString()}
-          </div>
-          <p className="text-xs text-emerald-600/70 mt-1">
-            {Math.round((budgetItems
-              .filter(item => ['seeds', 'materials'].includes(item.category))
-              .reduce((sum, item) => sum + item.total, 0) / strategy.total_investment) * 100)}% of total
-          </p>
-        </div>
-
-        <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800">
-          <div className="flex items-center gap-2 mb-2">
-            <Clock className="w-4 h-4 text-blue-600" />
-            <span className="text-xs font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wider">
-              Labor & Equipment
-            </span>
-          </div>
-          <div className="text-xl font-bold text-blue-600">
-            ₹{budgetItems
-              .filter(item => ['labor', 'equipment'].includes(item.category))
-              .reduce((sum, item) => sum + item.total, 0)
-              .toLocaleString()}
-          </div>
-          <p className="text-xs text-blue-600/70 mt-1">
-            {Math.round((budgetItems
-              .filter(item => ['labor', 'equipment'].includes(item.category))
-              .reduce((sum, item) => sum + item.total, 0) / strategy.total_investment) * 100)}% of total
-          </p>
-        </div>
-
-        <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-100 dark:border-purple-800">
-          <div className="flex items-center gap-2 mb-2">
-            <TrendingUp className="w-4 h-4 text-purple-600" />
-            <span className="text-xs font-bold text-purple-700 dark:text-purple-400 uppercase tracking-wider">
-              Infrastructure
-            </span>
-          </div>
-          <div className="text-xl font-bold text-purple-600">
-            ₹{budgetItems
-              .filter(item => item.category === 'infrastructure')
-              .reduce((sum, item) => sum + item.total, 0)
-              .toLocaleString()}
-          </div>
-          <p className="text-xs text-purple-600/70 mt-1">
-            {Math.round((budgetItems
-              .filter(item => item.category === 'infrastructure')
-              .reduce((sum, item) => sum + item.total, 0) / strategy.total_investment) * 100)}% of total
-          </p>
-        </div>
       </div>
 
       {/* Footer Note */}
