@@ -1,0 +1,198 @@
+state,district,village,latitude,longitude,year,season,crop,area_hectares,soil_type,soil_ph,soil_moisture_percent,annual_rainfall_mm,avg_temperature_c,climate_risk,drought_occurrence,flood_occurrence,irrigation_type,input_cost_inr,yield_kg_per_hectare,market_price_inr_per_kg,roi_percent,success_rating,farmer_feedback
+Maharashtra,Pune,Khadki,18.5626,73.8087,2023,Kharif,Rice,2.5,Black,7.2,35,1200,28,Medium,No,No,Drip,45000,4200,25,18.5,4,Good monsoon helped with decent yield but input costs were high.
+Maharashtra,Nashik,Sinnar,19.8462,73.9956,2023,Rabi,Wheat,3.2,Black,6.8,28,800,22,Low,No,No,Sprinkler,38000,3800,22,26.3,4,Excellent wheat harvest with good market prices this season.
+Karnataka,Bangalore,Yelahanka,13.1007,77.5963,2023,Kharif,Cotton,4.1,Red,6.5,32,950,26,Medium,No,No,Flood,52000,1800,45,55.4,5,Cotton performed exceptionally well despite moderate rainfall challenges.
+Telangana,Hyderabad,Secunderabad,17.4399,78.4983,2023,Kharif,Cotton,3.8,Black,7.1,38,1100,29,Medium,No,No,Drip,48000,2100,42,84.3,5,Very satisfied with cotton yield and market demand was strong.
+Punjab,Ludhiana,Pakhowal,30.9010,75.8573,2023,Rabi,Wheat,5.2,Alluvial,7.4,42,600,18,Low,No,No,Canal,42000,5200,20,48.1,5,Excellent wheat crop with canal irrigation supporting high yields.
+Tamil Nadu,Chennai,Tambaram,12.9249,80.1000,2023,Kharif,Rice,2.8,Alluvial,6.9,40,1400,30,High,No,Yes,Canal,41000,4800,24,79.0,4,Flooding affected some areas but overall rice production was good.
+Maharashtra,Aurangabad,Paithan,19.4809,75.3831,2023,Kharif,Sugarcane,1.5,Black,7.0,45,1300,31,Medium,No,No,Drip,85000,65000,4.2,22.4,4,Sugarcane requires heavy investment but gives steady returns over time.
+Karnataka,Mysore,Mandya,12.5211,76.8950,2023,Kharif,Maize,3.5,Red,6.3,29,850,25,Medium,Yes,No,Sprinkler,32000,3200,18,80.0,4,Drought conditions reduced maize yield but prices compensated well.
+Telangana,Warangal,Kazipet,17.9784,79.4561,2023,Kharif,Soybean,4.2,Black,6.7,33,1050,27,Medium,No,No,Rainfed,28000,2800,35,50.0,4,Soybean cultivation was profitable with good monsoon support this year.
+Punjab,Amritsar,Tarn Taran,31.4515,74.9255,2023,Rabi,Wheat,6.1,Alluvial,7.6,38,550,16,Low,No,No,Canal,45000,5800,19,45.1,5,Canal irrigation ensured excellent wheat production despite low rainfall.
+Tamil Nadu,Coimbatore,Pollachi,10.6581,77.0081,2023,Kharif,Cotton,3.9,Red,6.4,31,900,28,Medium,No,No,Drip,49000,1900,44,69.4,4,Cotton farming was challenging but drip irrigation helped maintain yields.
+Maharashtra,Kolhapur,Ichalkaranji,16.6877,74.4608,2023,Kharif,Sugarcane,2.1,Black,7.3,43,1450,29,Low,No,No,Flood,92000,72000,4.0,13.0,3,Sugarcane investment is high and returns are moderate this season.
+Karnataka,Hubli,Dharwad,15.4589,75.0078,2023,Rabi,Wheat,2.9,Black,6.9,26,700,21,Low,No,No,Sprinkler,36000,3600,21,10.0,3,Wheat yield was average but market prices were disappointing.
+Telangana,Nizamabad,Bodhan,18.6644,77.8499,2023,Kharif,Rice,3.1,Alluvial,7.0,37,1250,28,Medium,No,No,Canal,43000,4400,23,35.8,4,Rice cultivation went well with adequate canal water supply.
+Punjab,Patiala,Rajpura,30.4781,76.5937,2023,Kharif,Maize,4.8,Alluvial,7.2,35,650,24,Low,No,No,Sprinkler,35000,4200,17,4.0,3,Maize production was good but market prices were very low.
+Tamil Nadu,Madurai,Usilampatti,9.9697,77.7859,2023,Kharif,Cotton,3.6,Red,6.2,28,800,32,High,Yes,No,Drip,51000,1600,46,44.7,4,Drought stress affected cotton but good prices helped profitability.
+Maharashtra,Solapur,Pandharpur,17.6792,75.3200,2023,Rabi,Soybean,3.8,Black,6.8,24,600,23,Medium,No,No,Sprinkler,30000,2600,36,12.0,3,Soybean cultivation faced water shortage issues affecting final yield.
+Karnataka,Belgaum,Gokak,16.1667,74.8333,2023,Kharif,Maize,4.3,Red,6.6,32,920,26,Medium,No,No,Rainfed,33000,3400,18,85.5,5,Excellent maize harvest with good rainfall and strong market demand.
+Telangana,Karimnagar,Jagtial,18.7898,78.9196,2023,Kharif,Cotton,4.0,Black,7.1,36,1080,28,Medium,No,No,Drip,50000,2000,43,72.0,4,Cotton farming was successful with good fiber quality and prices.
+Punjab,Jalandhar,Phagwara,31.2244,75.7849,2023,Rabi,Wheat,5.8,Alluvial,7.5,41,580,17,Low,No,No,Canal,44000,5600,20,54.5,5,Outstanding wheat production with excellent canal irrigation facilities.
+Tamil Nadu,Salem,Mettur,11.7833,77.8000,2023,Kharif,Rice,2.6,Alluvial,6.8,39,1350,29,Medium,No,No,Canal,42000,4600,24,64.8,4,Rice farming benefited from good monsoon and canal water availability.
+Maharashtra,Ahmednagar,Shrirampur,19.6167,74.6667,2023,Kharif,Sugarcane,1.8,Black,7.2,44,1280,30,Medium,No,No,Drip,88000,68000,4.1,16.4,3,Sugarcane requires patience and heavy investment for moderate returns.
+Karnataka,Gulbarga,Bidar,17.9104,77.5199,2023,Rabi,Wheat,3.4,Black,6.7,27,750,20,Low,No,No,Sprinkler,37000,3700,22,19.5,4,Wheat cultivation was satisfactory with adequate irrigation support.
+Telangana,Medak,Sangareddy,17.6186,78.0831,2023,Kharif,Maize,3.7,Red,6.4,30,980,27,Medium,No,No,Sprinkler,34000,3500,17,75.0,4,Maize performed well with good rainfall and irrigation management.
+Punjab,Bathinda,Mansa,29.9988,75.3933,2023,Kharif,Cotton,4.5,Sandy,6.9,33,620,26,Medium,Yes,No,Sprinkler,53000,1700,45,44.2,4,Cotton cultivation faced drought but irrigation helped maintain decent yields.
+Tamil Nadu,Tiruchirapalli,Srirangam,10.8505,78.6837,2023,Kharif,Rice,3.0,Alluvial,7.1,38,1420,31,High,No,Yes,Canal,44000,4500,25,56.8,4,Rice production was good despite some flooding in low-lying areas.
+Maharashtra,Latur,Osmanabad,18.1667,76.0500,2023,Rabi,Soybean,4.1,Black,6.6,25,650,24,Medium,No,No,Sprinkler,31000,2700,37,24.2,4,Soybean cultivation was moderately successful with adequate water management.
+Karnataka,Shimoga,Bhadravati,13.8497,75.7004,2023,Kharif,Rice,2.7,Red,6.5,36,1150,27,Medium,No,No,Canal,40000,4300,24,58.0,4,Rice farming went smoothly with good monsoon and canal irrigation.
+Telangana,Nalgonda,Miryalaguda,16.8667,79.5667,2023,Kharif,Cotton,3.9,Black,7.0,34,1020,28,Medium,No,No,Drip,49000,1950,42,67.3,4,Cotton yield was satisfactory with good quality fiber production.
+Punjab,Kapurthala,Sultanpur,31.2180,75.3885,2023,Rabi,Wheat,5.5,Alluvial,7.4,40,570,18,Low,No,No,Canal,43000,5400,19,38.6,4,Wheat production was excellent with reliable canal water supply.
+Tamil Nadu,Erode,Gobichettipalayam,11.4500,77.4333,2023,Kharif,Maize,3.8,Red,6.3,29,880,29,Medium,No,No,Sprinkler,35000,3600,18,85.7,5,Maize cultivation exceeded expectations with good rainfall and prices.
+Maharashtra,Beed,Parli,18.8500,76.1000,2023,Kharif,Sugarcane,1.9,Black,7.1,42,1320,30,Medium,No,No,Flood,90000,70000,4.0,11.1,3,Sugarcane farming requires substantial investment with slow returns.
+Karnataka,Raichur,Sindhanur,15.7667,76.7500,2023,Rabi,Cotton,4.2,Black,6.8,31,720,22,Low,No,No,Sprinkler,48000,2200,41,88.3,5,Excellent cotton harvest with high quality fiber and good market prices.
+Telangana,Khammam,Bhadrachalam,17.6688,80.8936,2023,Kharif,Rice,3.2,Alluvial,6.9,39,1300,29,Medium,No,No,Canal,41000,4700,23,63.9,4,Rice cultivation was successful with good monsoon and river irrigation.
+Punjab,Hoshiarpur,Dasuya,31.8167,75.6500,2023,Kharif,Maize,4.6,Loamy,7.3,34,640,25,Low,No,No,Sprinkler,36000,4400,16,95.6,5,Outstanding maize production with excellent soil conditions and irrigation.
+Tamil Nadu,Thanjavur,Kumbakonam,10.9601,79.3788,2023,Kharif,Rice,2.9,Alluvial,7.0,41,1480,30,High,No,Yes,Canal,43000,4800,24,67.4,4,Rice farming was profitable despite some flooding challenges.
+Maharashtra,Jalgaon,Bhusawal,21.0333,75.7833,2023,Rabi,Wheat,3.6,Black,6.9,26,680,21,Low,No,No,Sprinkler,38000,3900,21,16.3,3,Wheat yield was decent but market prices were not very encouraging.
+Karnataka,Bijapur,Bagalkot,16.1833,75.7000,2023,Kharif,Cotton,4.4,Black,7.2,35,960,27,Medium,No,No,Drip,51000,2100,43,77.6,5,Cotton farming was highly successful with excellent yield and quality.
+Telangana,Adilabad,Nirmal,19.0833,78.3500,2023,Kharif,Soybean,4.0,Red,6.5,32,1040,26,Medium,No,No,Rainfed,29000,2900,36,58.6,4,Soybean cultivation benefited from good monsoon rains this season.
+Punjab,Sangrur,Malerkotla,30.5333,75.8833,2023,Rabi,Wheat,6.0,Alluvial,7.6,43,590,17,Low,No,No,Canal,45000,5900,20,62.2,5,Exceptional wheat harvest with canal irrigation ensuring high productivity.
+Tamil Nadu,Vellore,Arcot,12.9167,79.3167,2023,Kharif,Rice,2.8,Red,6.6,37,1380,31,Medium,No,No,Canal,42000,4600,25,73.8,4,Rice production was good with adequate water supply from canals.
+Maharashtra,Wardha,Hinganghat,20.5500,78.8333,2023,Kharif,Cotton,3.7,Black,7.0,33,1080,28,Medium,No,No,Drip,49000,1900,44,71.8,4,Cotton cultivation was profitable with good fiber quality and demand.
+Karnataka,Chitradurga,Hiriyur,14.1000,76.6167,2023,Rabi,Maize,3.3,Red,6.4,28,700,23,Medium,No,No,Sprinkler,34000,3200,19,78.8,4,Maize farming was successful with good irrigation management.
+Telangana,Rangareddy,Shamshabad,17.2500,78.4000,2023,Kharif,Rice,3.1,Alluvial,6.8,38,1220,29,Medium,No,No,Canal,41000,4500,24,61.0,4,Rice cultivation went well with good monsoon and canal support.
+Punjab,Firozpur,Fazilka,30.4028,74.0286,2023,Kharif,Cotton,4.3,Sandy,7.1,31,610,27,Medium,Yes,No,Sprinkler,52000,1650,46,45.8,4,Cotton faced drought stress but irrigation helped maintain reasonable yields.
+Tamil Nadu,Tirunelveli,Palayamkottai,8.7139,77.7567,2023,Kharif,Rice,2.7,Alluvial,6.9,40,1520,32,High,No,Yes,Canal,44000,4700,25,67.0,4,Rice farming was good despite occasional flooding in the region.
+Maharashtra,Yavatmal,Wani,20.0500,78.9500,2023,Rabi,Soybean,3.9,Black,6.7,24,620,22,Medium,No,No,Sprinkler,30000,2650,38,36.7,4,Soybean cultivation was moderately profitable with adequate irrigation.
+Karnataka,Kolar,Bangarpet,12.9833,78.1667,2023,Kharif,Maize,3.6,Red,6.2,30,890,26,Medium,No,No,Sprinkler,35000,3500,18,80.0,4,Maize production was excellent with good rainfall and market prices.
+Telangana,Mahabubnagar,Gadwal,16.2167,77.8000,2023,Kharif,Cotton,4.1,Black,7.1,35,1000,28,Medium,No,No,Drip,50000,2000,42,68.0,4,Cotton farming was successful with good quality production and prices.
+Punjab,Gurdaspur,Batala,31.8167,75.2000,2023,Rabi,Wheat,5.7,Loamy,7.5,42,560,16,Low,No,No,Canal,44000,5500,19,37.5,4,Wheat cultivation was excellent with canal irrigation support.
+Tamil Nadu,Kanchipuram,Chengalpattu,12.6833,79.9833,2023,Kharif,Rice,2.9,Alluvial,7.0,39,1400,30,High,No,Yes,Canal,43000,4600,24,56.7,4,Rice production was good despite some waterlogging issues.
+Maharashtra,Nanded,Kinwat,19.6167,78.2000,2023,Kharif,Sugarcane,2.0,Black,7.2,44,1350,31,Medium,No,No,Drip,91000,69000,4.1,13.2,3,Sugarcane requires heavy investment but provides steady income.
+Karnataka,Tumkur,Madhugiri,13.6667,77.2000,2023,Rabi,Wheat,3.1,Red,6.6,27,720,21,Low,No,No,Sprinkler,37000,3800,22,26.5,4,Wheat yield was satisfactory with good irrigation management.
+Telangana,Warangal,Hanamkonda,18.0000,79.5833,2023,Kharif,Maize,3.8,Black,6.8,32,1060,27,Medium,No,No,Sprinkler,35000,3700,17,79.4,4,Maize cultivation was profitable with good monsoon support.
+Punjab,Mohali,Kharar,30.7500,76.6500,2023,Kharif,Maize,4.7,Alluvial,7.4,36,630,24,Low,No,No,Sprinkler,36000,4500,16,100.0,5,Exceptional maize harvest with excellent soil and irrigation conditions.
+Tamil Nadu,Cuddalore,Chidambaram,11.3833,79.6833,2023,Kharif,Rice,2.8,Alluvial,6.9,38,1450,31,High,No,Yes,Canal,42000,4700,25,79.8,4,Rice farming was successful despite some flooding challenges.
+Maharashtra,Akola,Murtijapur,20.7333,77.3667,2023,Rabi,Cotton,4.0,Black,7.0,29,700,23,Low,No,No,Sprinkler,47000,2300,40,95.7,5,Excellent cotton harvest with high quality fiber production.
+Karnataka,Hassan,Belur,13.1667,75.8667,2023,Kharif,Rice,2.6,Red,6.5,35,1100,26,Medium,No,No,Canal,40000,4200,24,52.0,4,Rice cultivation was good with adequate monsoon and canal water.
+Telangana,Suryapet,Kodad,17.2333,79.9667,2023,Kharif,Cotton,3.9,Alluvial,6.9,34,1120,28,Medium,No,No,Drip,49000,1950,43,71.0,4,Cotton farming was profitable with good yield and market demand.
+Punjab,Nawanshahr,Banga,31.1833,76.0000,2023,Rabi,Wheat,5.9,Alluvial,7.6,41,580,18,Low,No,No,Canal,45000,5800,20,57.8,5,Outstanding wheat production with reliable canal irrigation.
+Tamil Nadu,Nagapattinam,Mayiladuthurai,11.1000,79.6500,2023,Kharif,Rice,3.0,Alluvial,7.1,40,1500,30,High,No,Yes,Canal,44000,4800,24,61.8,4,Rice production was excellent despite occasional flooding.
+Maharashtra,Buldhana,Malkapur,20.8833,76.2000,2023,Kharif,Cotton,3.8,Black,6.9,33,1050,28,Medium,No,No,Drip,48000,1900,44,74.2,4,Cotton cultivation was successful with good fiber quality.
+Karnataka,Mandya,Maddur,12.5833,77.0500,2023,Kharif,Sugarcane,1.6,Alluvial,7.0,43,1200,29,Medium,No,No,Flood,87000,66000,4.2,19.3,4,Sugarcane farming was moderately profitable with good irrigation.
+Telangana,Siddipet,Gajwel,18.0000,78.8333,2023,Kharif,Maize,3.7,Red,6.6,31,1000,27,Medium,No,No,Sprinkler,34000,3600,18,90.6,5,Maize production exceeded expectations with excellent results.
+Punjab,Ropar,Morinda,30.7833,76.5000,2023,Kharif,Cotton,4.4,Loamy,7.2,33,620,26,Medium,Yes,No,Sprinkler,53000,1700,45,44.3,4,Cotton faced drought but irrigation maintained decent productivity.
+Tamil Nadu,Sivaganga,Karaikudi,10.0667,78.7667,2023,Kharif,Cotton,3.7,Red,6.3,29,820,31,High,Yes,No,Drip,50000,1650,46,52.2,4,Cotton cultivation was challenging due to drought but prices helped.
+Maharashtra,Washim,Karanja,20.4833,77.4833,2023,Rabi,Soybean,4.2,Black,6.8,25,640,23,Medium,No,No,Sprinkler,31000,2750,37,27.4,4,Soybean farming was moderately successful with good management.
+Karnataka,Davangere,Harihar,14.5167,75.8000,2023,Rabi,Wheat,3.2,Black,6.7,26,730,20,Low,No,No,Sprinkler,38000,3700,21,5.3,3,Wheat yield was average but market prices were disappointing.
+Telangana,Yadadri,Bhongir,17.5167,78.8833,2023,Kharif,Rice,3.1,Alluvial,6.8,37,1180,28,Medium,No,No,Canal,41000,4400,23,52.7,4,Rice cultivation was successful with good canal water availability.
+Punjab,Fatehgarh Sahib,Sirhind,30.6333,76.3833,2023,Rabi,Wheat,5.6,Alluvial,7.5,40,570,17,Low,No,No,Canal,44000,5400,19,32.7,4,Wheat production was excellent with canal irrigation facilities.
+Tamil Nadu,Ramanathapuram,Paramakudi,9.5500,78.5833,2023,Kharif,Rice,2.7,Sandy,6.8,35,1350,32,High,No,Yes,Canal,43000,4300,25,50.0,4,Rice farming faced some challenges but overall production was good.
+Maharashtra,Hingoli,Kalamnuri,19.6667,77.3167,2023,Kharif,Cotton,3.9,Black,7.1,34,1070,28,Medium,No,No,Drip,49000,1950,43,69.4,4,Cotton cultivation was profitable with good quality fiber.
+Karnataka,Bellary,Hospet,15.2667,76.3833,2023,Kharif,Maize,3.5,Red,6.4,30,900,26,Medium,No,No,Sprinkler,35000,3400,18,74.9,4,Maize farming was successful with good rainfall and irrigation.
+Telangana,Jangaon,Devaruppula,17.7167,79.1667,2023,Kharif,Cotton,4.0,Black,7.0,35,1040,28,Medium,No,No,Drip,50000,2000,42,68.0,4,Cotton farming was successful with excellent fiber quality.
+Punjab,Moga,Baghapurana,30.7833,75.1000,2023,Kharif,Cotton,4.5,Sandy,7.0,32,600,27,Medium,Yes,No,Sprinkler,52000,1650,46,46.2,4,Cotton cultivation faced water stress but irrigation helped maintain yields.
+Tamil Nadu,Pudukkottai,Aranthangi,10.1667,79.0000,2023,Kharif,Rice,2.9,Alluvial,6.9,38,1420,30,High,No,Yes,Canal,43000,4600,24,57.7,4,Rice production was good with adequate canal water supply.
+Maharashtra,Osmanabad,Tuljapur,18.0000,76.0667,2023,Rabi,Soybean,4.1,Black,6.6,24,630,24,Medium,No,No,Sprinkler,30000,2700,38,42.0,4,Soybean cultivation was moderately profitable with irrigation support.
+Karnataka,Koppal,Gangavati,15.4333,76.5333,2023,Kharif,Cotton,4.3,Black,7.1,33,940,27,Medium,No,No,Drip,51000,2050,42,69.4,4,Cotton farming was highly successful with good yield and prices.
+Telangana,Sangareddy,Patancheru,17.5333,78.2667,2023,Kharif,Maize,3.6,Red,6.5,31,990,27,Medium,No,No,Sprinkler,34000,3500,18,85.3,5,Maize cultivation exceeded expectations with excellent management.
+Punjab,Barnala,Tapa,30.3833,75.5167,2023,Rabi,Wheat,5.8,Alluvial,7.4,42,590,18,Low,No,No,Canal,45000,5700,19,40.0,4,Wheat production was excellent with reliable canal irrigation.
+Tamil Nadu,Tiruvarur,Mannargudi,10.6667,79.4500,2023,Kharif,Rice,3.0,Alluvial,7.0,39,1480,31,High,No,Yes,Canal,44000,4700,25,67.0,4,Rice farming was successful despite some waterlogging issues.
+Maharashtra,Parbhani,Jintur,19.6167,76.6833,2023,Kharif,Cotton,3.8,Black,6.9,33,1060,28,Medium,No,No,Drip,48000,1900,44,74.2,4,Cotton cultivation was profitable with good fiber quality and demand.
+Karnataka,Gadag,Mundargi,15.2000,75.8833,2023,Rabi,Wheat,3.3,Black,6.8,27,710,21,Low,No,No,Sprinkler,37000,3600,22,14.6,3,Wheat yield was decent but market prices were not encouraging.
+Telangana,Vikarabad,Tandur,17.2500,77.5833,2023,Kharif,Rice,3.2,Red,6.7,36,1150,28,Medium,No,No,Canal,41000,4300,24,50.2,4,Rice cultivation was good with adequate monsoon and irrigation.
+Punjab,Muktsar,Gidderbaha,30.2000,74.9500,2023,Kharif,Cotton,4.6,Sandy,6.9,31,580,28,High,Yes,No,Sprinkler,54000,1600,47,38.5,4,Cotton faced severe drought but irrigation helped maintain some yield.
+Tamil Nadu,Ariyalur,Udayarpalayam,11.1333,79.0833,2023,Kharif,Rice,2.8,Alluvial,6.8,37,1400,30,Medium,No,No,Canal,42000,4500,24,57.1,4,Rice production was satisfactory with good canal water availability.
+Maharashtra,Jalna,Ambad,19.6167,75.7833,2023,Rabi,Soybean,4.0,Black,6.7,25,650,23,Medium,No,No,Sprinkler,31000,2800,36,25.8,4,Soybean cultivation was moderately successful with irrigation support.
+Karnataka,Ramanagara,Channapatna,12.6500,77.2000,2023,Kharif,Maize,3.4,Red,6.3,29,880,25,Medium,No,No,Sprinkler,35000,3300,19,79.4,4,Maize farming was profitable with good rainfall and management.
+Telangana,Kamareddy,Banswada,18.3167,78.3333,2023,Kharif,Cotton,4.1,Black,7.0,34,1020,28,Medium,No,No,Drip,50000,1980,43,70.3,4,Cotton cultivation was successful with good quality production.
+Punjab,Faridkot,Kotkapura,30.5833,74.8333,2023,Rabi,Wheat,5.9,Loamy,7.6,43,560,17,Low,No,No,Canal,45000,5800,20,57.8,5,Outstanding wheat harvest with excellent soil and irrigation.
+Tamil Nadu,Perambalur,Kunnam,11.2333,78.8833,2023,Kharif,Rice,2.9,Red,6.6,36,1380,29,Medium,No,No,Canal,42000,4400,25,61.9,4,Rice cultivation was good with adequate water supply and monsoon.
+Maharashtra,Aurangabad,Gangapur,19.6833,75.0167,2023,Kharif,Sugarcane,1.7,Black,7.1,44,1320,30,Medium,No,No,Drip,89000,67000,4.1,15.7,3,Sugarcane farming requires patience but provides steady returns.
+Karnataka,Chikmagalur,Mudigere,13.1333,75.6333,2023,Kharif,Rice,2.5,Red,6.4,34,1180,26,Medium,No,No,Canal,40000,4100,24,46.0,4,Rice production was satisfactory with good monsoon support.
+Telangana,Bhadradri,Kothagudem,17.5500,80.6167,2023,Kharif,Rice,3.1,Alluvial,6.9,38,1280,29,Medium,No,No,Canal,41000,4600,23,58.0,4,Rice cultivation was successful with good river irrigation.
+Punjab,Mansa,Budhlada,29.9167,75.5667,2023,Kharif,Cotton,4.4,Sandy,7.1,32,610,27,Medium,Yes,No,Sprinkler,53000,1680,45,42.6,4,Cotton cultivation faced drought stress but irrigation maintained yields.
+Tamil Nadu,Karur,Kulithalai,10.9333,78.4167,2023,Kharif,Cotton,3.6,Red,6.2,28,850,30,Medium,No,No,Drip,49000,1750,44,57.1,4,Cotton farming was moderately successful with drip irrigation.
+Maharashtra,Bhandara,Tumsar,21.3833,79.7333,2023,Rabi,Wheat,3.5,Alluvial,7.2,28,720,22,Low,No,No,Sprinkler,38000,3800,21,10.5,3,Wheat yield was average but market conditions were challenging.
+Karnataka,Udupi,Kundapur,13.6333,74.6833,2022,Kharif,Rice,2.7,Alluvial,6.8,37,1450,28,High,No,Yes,Canal,41000,4400,23,46.8,4,Rice farming faced flooding but overall production was decent.
+Telangana,Peddapalli,Manthani,18.6333,79.4667,2022,Kharif,Maize,3.8,Black,6.7,32,1080,27,Medium,No,No,Sprinkler,35000,3700,17,79.4,4,Maize cultivation was highly profitable with good monsoon.
+Punjab,Tarn Taran,Patti,31.2667,74.9167,2022,Rabi,Wheat,6.0,Alluvial,7.5,41,550,16,Low,No,No,Canal,44000,5900,19,52.3,5,Excellent wheat production with canal irrigation support.
+Tamil Nadu,Dharmapuri,Harur,12.0500,78.4833,2022,Kharif,Cotton,3.9,Red,6.4,30,900,29,Medium,No,No,Drip,50000,1850,43,59.1,4,Cotton cultivation was successful with good fiber quality.
+Maharashtra,Chandrapur,Warora,20.2333,79.0000,2022,Kharif,Rice,3.0,Black,7.0,36,1200,28,Medium,No,No,Canal,42000,4300,24,45.7,4,Rice production was good with adequate canal water supply.
+Karnataka,Kodagu,Madikeri,12.4167,75.7333,2022,Kharif,Rice,2.4,Red,6.3,35,1350,25,Medium,No,No,Canal,39000,4000,25,56.4,4,Rice cultivation benefited from good monsoon and hilly terrain.
+Telangana,Jayashankar,Mulugu,18.1833,79.9167,2022,Kharif,Cotton,4.0,Red,6.6,33,1050,28,Medium,No,No,Drip,49000,1950,42,67.3,4,Cotton farming was profitable with good quality production.
+Punjab,Shaheed Bhagat Singh Nagar,Nawanshahr,31.1167,76.1167,2022,Kharif,Maize,4.8,Loamy,7.3,35,640,25,Low,No,No,Sprinkler,36000,4600,16,104.4,5,Exceptional maize harvest with excellent soil conditions.
+Tamil Nadu,Krishnagiri,Hosur,12.7333,77.8333,2022,Kharif,Maize,3.7,Red,6.5,31,920,27,Medium,No,No,Sprinkler,35000,3600,18,85.7,5,Maize production was outstanding with good management practices.
+Maharashtra,Gadchiroli,Aheri,19.0833,80.0000,2022,Kharif,Rice,2.8,Alluvial,6.9,38,1380,29,High,No,Yes,Canal,43000,4500,24,51.2,4,Rice farming was good despite some flooding challenges.
+Karnataka,Chamarajanagar,Kollegal,12.1500,77.1167,2022,Rabi,Sugarcane,1.8,Red,6.7,42,800,24,Low,No,No,Drip,86000,64000,4.3,20.9,4,Sugarcane cultivation was moderately profitable with drip irrigation.
+Telangana,Mancherial,Bellampalli,18.8833,79.4667,2022,Kharif,Cotton,3.9,Black,7.1,34,1040,28,Medium,No,No,Drip,49000,1950,43,69.4,4,Cotton cultivation was successful with good fiber quality.
+Punjab,Rupnagar,Anandpur Sahib,31.2333,76.5000,2022,Rabi,Wheat,5.7,Alluvial,7.4,40,570,18,Low,No,No,Canal,44000,5500,20,50.0,5,Wheat production was excellent with reliable irrigation.
+Tamil Nadu,Namakkal,Rasipuram,11.4667,78.1833,2022,Kharif,Cotton,3.8,Red,6.3,29,880,30,Medium,No,No,Drip,50000,1800,44,58.4,4,Cotton farming was moderately successful with drip irrigation.
+Maharashtra,Gondia,Deori,21.4167,79.5167,2022,Rabi,Wheat,3.4,Alluvial,7.1,27,700,21,Low,No,No,Sprinkler,37000,3700,22,19.5,4,Wheat cultivation was satisfactory with adequate irrigation.
+Karnataka,Dakshina Kannada,Mangalore,12.9167,74.8500,2022,Kharif,Rice,2.6,Alluvial,6.8,39,1520,27,High,No,Yes,Canal,42000,4300,24,46.4,4,Rice production was good despite coastal flooding issues.
+Telangana,Asifabad,Komaram Bheem,19.3667,79.3000,2022,Kharif,Maize,3.6,Red,6.4,30,980,26,Medium,No,No,Sprinkler,34000,3500,18,85.3,5,Maize cultivation exceeded expectations with excellent results.
+Punjab,Pathankot,Dhar Kalan,32.2667,75.6333,2022,Kharif,Cotton,4.3,Loamy,7.2,33,620,26,Medium,Yes,No,Sprinkler,52000,1700,45,47.1,4,Cotton faced drought but irrigation helped maintain decent yields.
+Tamil Nadu,Tirupattur,Vaniyambadi,12.6833,78.6167,2022,Kharif,Rice,2.9,Red,6.6,36,1350,29,Medium,No,No,Canal,42000,4400,25,61.9,4,Rice cultivation was successful with good canal irrigation.
+Maharashtra,Nagpur,Kamptee,21.2333,79.2167,2022,Kharif,Cotton,3.7,Black,6.9,33,1070,28,Medium,No,No,Drip,48000,1900,44,74.2,4,Cotton cultivation was profitable with good quality fiber.
+Karnataka,Uttara Kannada,Karwar,14.8167,74.1333,2022,Kharif,Rice,2.5,Alluvial,6.7,38,1480,27,High,No,Yes,Canal,41000,4200,24,46.3,4,Rice farming faced some flooding but production was satisfactory.
+Telangana,Nagarkurnool,Achampet,16.5000,78.0000,2022,Kharif,Cotton,4.1,Black,7.0,35,1000,28,Medium,No,No,Drip,50000,2000,42,68.0,4,Cotton farming was successful with excellent fiber production.
+Punjab,Fazilka,Jalalabad,30.6167,73.8667,2022,Rabi,Wheat,5.8,Sandy,7.3,39,540,17,Low,No,No,Canal,43000,5600,19,47.4,4,Wheat production was excellent despite sandy soil conditions.
+Tamil Nadu,Villupuram,Tindivanam,12.2333,79.6500,2022,Kharif,Rice,2.8,Alluvial,6.9,37,1420,30,High,No,Yes,Canal,43000,4500,24,51.2,4,Rice cultivation was good with adequate water supply.
+Maharashtra,Amravati,Achalpur,21.2667,77.5167,2022,Rabi,Soybean,4.0,Black,6.8,25,660,23,Medium,No,No,Sprinkler,31000,2800,36,25.8,4,Soybean cultivation was moderately profitable with irrigation.
+Karnataka,Bagalkot,Jamkhandi,16.5000,75.2833,2022,Kharif,Cotton,4.4,Black,7.2,34,950,27,Medium,No,No,Drip,51000,2100,42,73.5,4,Cotton cultivation was highly successful with good yields.
+Telangana,Wanaparthy,Pebbair,16.3667,78.0667,2022,Kharif,Rice,3.1,Alluvial,6.8,37,1180,28,Medium,No,No,Canal,41000,4400,23,52.7,4,Rice production was successful with good canal irrigation.
+Punjab,Malerkotla,Ahmedgarh,30.7833,76.1667,2022,Kharif,Maize,4.7,Alluvial,7.4,36,630,24,Low,No,No,Sprinkler,36000,4500,16,100.0,5,Outstanding maize production with excellent conditions.
+Tamil Nadu,Kallakurichi,Sankarapuram,11.9333,78.9167,2022,Kharif,Rice,2.9,Red,6.5,36,1380,29,Medium,No,No,Canal,42000,4400,25,61.9,4,Rice cultivation was good with adequate monsoon support.
+Maharashtra,Ratnagiri,Chiplun,17.5333,73.5167,2022,Kharif,Rice,2.6,Alluvial,6.8,40,1650,28,High,No,Yes,Canal,43000,4300,24,39.5,4,Rice farming faced heavy rainfall but production was decent.
+Karnataka,Vijayapura,Indi,17.1667,75.9667,2022,Rabi,Wheat,3.3,Black,6.9,26,720,20,Low,No,No,Sprinkler,38000,3600,21,0.0,3,Wheat yield was average and market prices were very poor.
+Telangana,Jogulamba Gadwal,Alampur,15.8833,78.1333,2022,Kharif,Cotton,4.0,Red,6.7,33,980,28,Medium,No,No,Drip,49000,1950,43,69.4,4,Cotton cultivation was profitable with good quality production.
+Punjab,Kapurthala,Phagwara,31.2333,75.7667,2022,Rabi,Wheat,5.9,Loamy,7.5,42,580,18,Low,No,No,Canal,45000,5800,20,57.8,5,Excellent wheat harvest with outstanding irrigation facilities.
+Tamil Nadu,Tenkasi,Shencottai,8.9667,77.3167,2022,Kharif,Rice,2.7,Alluvial,6.9,38,1520,31,High,No,Yes,Canal,44000,4400,25,50.0,4,Rice production was good despite some waterlogging issues.
+Maharashtra,Sindhudurg,Kudal,16.0000,73.6833,2022,Kharif,Rice,2.5,Alluvial,6.7,41,1700,27,High,No,Yes,Canal,44000,4200,24,37.3,4,Rice farming faced excessive rainfall but managed decent yields.
+Karnataka,Yadgir,Shahapur,16.7667,77.0500,2022,Kharif,Cotton,4.2,Black,7.1,33,920,27,Medium,No,No,Drip,50000,2000,42,68.0,4,Cotton cultivation was successful with good fiber quality.
+Telangana,Narayanpet,Makthal,16.7500,77.9167,2022,Kharif,Maize,3.7,Red,6.5,31,1000,27,Medium,No,No,Sprinkler,34000,3600,18,90.6,5,Maize production was exceptional with excellent management.
+Punjab,Sahibzada Ajit Singh Nagar,Derabassi,30.5833,76.8167,2022,Kharif,Cotton,4.4,Alluvial,7.1,32,610,26,Medium,Yes,No,Sprinkler,52000,1650,46,46.2,4,Cotton faced drought stress but irrigation maintained yields.
+Tamil Nadu,Ranipet,Arcot,12.9000,79.3167,2022,Kharif,Rice,2.8,Red,6.6,37,1380,30,Medium,No,No,Canal,42000,4500,24,57.1,4,Rice cultivation was successful with good water management.
+Maharashtra,Kolhapur,Shahuwadi,16.3500,74.1833,2022,Kharif,Sugarcane,1.9,Black,7.2,43,1420,29,Low,No,No,Flood,90000,70000,4.0,11.1,3,Sugarcane farming requires heavy investment with moderate returns.
+Karnataka,Haveri,Ranebennur,14.6167,75.6333,2022,Rabi,Cotton,4.1,Black,6.8,30,710,22,Low,No,No,Sprinkler,47000,2200,41,92.1,5,Excellent cotton harvest with high quality fiber production.
+Telangana,Mulugu,Venkatapur,18.1167,80.3167,2022,Kharif,Rice,3.0,Alluvial,6.9,38,1300,29,Medium,No,No,Canal,41000,4600,23,58.5,4,Rice cultivation was successful with good river irrigation.
+Punjab,Amritsar,Ajnala,31.8333,74.7667,2022,Rabi,Wheat,6.1,Alluvial,7.6,43,560,16,Low,No,No,Canal,45000,6000,19,52.0,5,Outstanding wheat production with excellent canal facilities.
+Tamil Nadu,Tiruvannamalai,Polur,12.5167,79.1333,2022,Kharif,Rice,2.9,Red,6.5,36,1350,29,Medium,No,No,Canal,42000,4400,25,61.9,4,Rice production was good with adequate irrigation support.
+Maharashtra,Sangli,Miraj,16.8333,74.6500,2022,Rabi,Sugarcane,2.0,Black,7.1,44,900,25,Low,No,No,Drip,88000,68000,4.2,25.5,4,Sugarcane cultivation was moderately profitable with good management.
+Karnataka,Kalaburagi,Afzalpur,17.2000,76.3500,2022,Kharif,Cotton,4.3,Black,7.0,34,960,27,Medium,No,No,Drip,51000,2050,42,69.4,4,Cotton farming was highly successful with excellent yields.
+Telangana,Rajanna Sircilla,Vemulawada,18.3167,78.8667,2022,Kharif,Cotton,3.9,Black,7.1,35,1020,28,Medium,No,No,Drip,49000,1950,43,69.4,4,Cotton cultivation was profitable with good quality fiber.
+Punjab,Ludhiana,Khanna,30.7000,76.2167,2022,Kharif,Maize,4.9,Alluvial,7.4,37,650,25,Low,No,No,Sprinkler,37000,4700,16,103.2,5,Exceptional maize harvest with outstanding soil conditions.
+Tamil Nadu,Chengalpattu,Madurantakam,12.5000,79.9000,2022,Kharif,Rice,2.8,Alluvial,6.9,38,1450,30,High,No,Yes,Canal,43000,4500,24,51.2,4,Rice farming was successful despite some flooding challenges.
+Maharashtra,Satara,Karad,17.2833,74.1833,2021,Kharif,Sugarcane,1.7,Black,7.0,42,1380,30,Medium,No,No,Drip,89000,67000,4.1,15.7,3,Sugarcane requires patience and heavy investment for steady returns.
+Karnataka,Shivamogga,Sagar,14.1667,75.0333,2021,Kharif,Rice,2.6,Red,6.4,35,1180,26,Medium,No,No,Canal,40000,4100,24,46.0,4,Rice production was satisfactory with good monsoon support.
+Telangana,Mahabubabad,Thorrur,17.6000,80.0167,2021,Kharif,Cotton,4.0,Alluvial,6.8,34,1120,28,Medium,No,No,Drip,49000,1950,43,71.0,4,Cotton farming was profitable with good yield and quality.
+Punjab,Patiala,Samana,30.1500,76.1833,2021,Rabi,Wheat,5.8,Alluvial,7.5,41,570,17,Low,No,No,Canal,44000,5700,19,42.0,4,Wheat production was excellent with canal irrigation support.
+Tamil Nadu,Kanyakumari,Nagercoil,8.1833,77.4333,2021,Kharif,Rice,2.7,Alluvial,6.8,39,1580,29,High,No,Yes,Canal,44000,4300,25,44.3,4,Rice farming faced heavy rainfall but production was decent.
+Maharashtra,Solapur,Akkalkot,17.5167,76.2000,2021,Rabi,Cotton,3.9,Black,6.9,28,680,24,Low,No,No,Sprinkler,47000,2400,40,104.3,5,Excellent cotton harvest with high quality fiber and good prices.
+Karnataka,Chikkaballapur,Bagepalli,13.7833,77.7833,2021,Kharif,Maize,3.5,Red,6.3,30,900,25,Medium,No,No,Sprinkler,35000,3400,18,74.9,4,Maize farming was successful with good rainfall and management.
+Telangana,Suryapet,Nalgonda,17.0500,79.2167,2021,Kharif,Rice,3.1,Alluvial,6.9,37,1200,28,Medium,No,No,Canal,41000,4500,23,52.4,4,Rice cultivation was successful with good canal water supply.
+Punjab,Jalandhar,Nakodar,31.1333,75.4667,2021,Kharif,Cotton,4.5,Loamy,7.2,33,620,26,Medium,Yes,No,Sprinkler,53000,1700,45,44.3,4,Cotton faced drought but irrigation helped maintain decent yields.
+Tamil Nadu,Dindigul,Palani,10.4500,77.5167,2021,Kharif,Cotton,3.8,Red,6.2,29,860,31,Medium,No,No,Drip,50000,1800,44,58.4,4,Cotton cultivation was moderately successful with drip irrigation.
+Maharashtra,Pune,Baramati,18.1500,74.5833,2021,Kharif,Sugarcane,1.8,Black,7.1,43,1300,30,Medium,No,No,Flood,90000,69000,4.0,6.7,3,Sugarcane farming requires substantial investment with slow returns.
+Karnataka,Mysuru,Hunsur,12.3000,76.2833,2021,Rabi,Wheat,3.2,Red,6.6,27,720,21,Low,No,No,Sprinkler,37000,3700,22,19.5,4,Wheat cultivation was satisfactory with adequate irrigation.
+Telangana,Khammam,Yellandu,17.5833,80.3333,2021,Kharif,Maize,3.7,Black,6.7,32,1080,27,Medium,No,No,Sprinkler,35000,3600,17,75.4,4,Maize cultivation was profitable with good monsoon support.
+Punjab,Bathinda,Talwandi Sabo,30.0667,75.0833,2021,Rabi,Wheat,5.9,Sandy,7.3,40,560,18,Low,No,No,Canal,44000,5800,20,63.6,5,Excellent wheat production despite sandy soil conditions.
+Tamil Nadu,Theni,Periyakulam,10.1333,77.5500,2021,Kharif,Cotton,3.7,Red,6.4,30,880,30,Medium,No,No,Drip,50000,1850,43,59.1,4,Cotton farming was successful with good fiber quality production.
+Maharashtra,Nashik,Igatpuri,19.6833,73.5667,2021,Kharif,Rice,2.8,Black,6.8,36,1250,27,Medium,No,No,Canal,42000,4300,24,45.7,4,Rice production was good with adequate canal water supply.
+Karnataka,Ballari,Sandur,15.1167,76.5500,2021,Kharif,Cotton,4.2,Red,6.5,33,940,26,Medium,No,No,Drip,50000,2000,42,68.0,4,Cotton cultivation was successful with good quality fiber.
+Telangana,Nirmal,Bhainsa,19.1000,77.9667,2021,Kharif,Soybean,4.1,Black,6.6,33,1060,26,Medium,No,No,Rainfed,29000,3000,35,62.1,4,Soybean cultivation was profitable with good monsoon rains.
+Punjab,Firozpur,Zira,30.9667,74.9833,2021,Kharif,Cotton,4.4,Sandy,7.0,31,600,27,Medium,Yes,No,Sprinkler,52000,1650,46,46.2,4,Cotton cultivation faced water stress but irrigation helped.
+Tamil Nadu,Virudhunagar,Sivakasi,9.4500,77.8000,2021,Kharif,Cotton,3.9,Red,6.3,28,820,32,High,Yes,No,Drip,51000,1650,46,52.2,4,Cotton cultivation was challenging due to drought conditions.
+Maharashtra,Ahmednagar,Sangamner,19.5667,74.2167,2021,Rabi,Soybean,4.0,Black,6.7,25,650,23,Medium,No,No,Sprinkler,31000,2800,36,25.8,4,Soybean farming was moderately successful with irrigation.
+Karnataka,Dharwad,Hubli,15.3647,75.1240,2021,Kharif,Cotton,4.3,Black,7.1,34,950,27,Medium,No,No,Drip,51000,2050,42,69.4,4,Cotton farming was highly successful with excellent yields.
+Telangana,Warangal,Parkal,17.9667,79.6333,2021,Kharif,Rice,3.0,Alluvial,6.8,37,1180,28,Medium,No,No,Canal,41000,4400,23,52.7,4,Rice cultivation was successful with good canal irrigation.
+Punjab,Gurdaspur,Pathankot,32.2667,75.6333,2021,Rabi,Wheat,5.7,Loamy,7.4,41,570,17,Low,No,No,Canal,44000,5500,19,37.5,4,Wheat production was excellent with canal irrigation facilities.
+Tamil Nadu,Coimbatore,Mettupalayam,11.2833,76.9333,2021,Kharif,Rice,2.9,Red,6.5,36,1350,28,Medium,No,No,Canal,42000,4400,25,61.9,4,Rice cultivation was good with adequate water supply.
+Maharashtra,Latur,Udgir,18.3833,77.1167,2021,Kharif,Cotton,3.8,Black,6.9,33,1050,28,Medium,No,No,Drip,48000,1900,44,74.2,4,Cotton cultivation was profitable with good fiber quality.
+Karnataka,Raichur,Manvi,15.9833,77.0500,2021,Rabi,Cotton,4.1,Black,6.8,30,710,22,Low,No,No,Sprinkler,47000,2200,41,92.1,5,Excellent cotton harvest with high quality production.
+Telangana,Karimnagar,Metpalli,18.4667,79.1500,2021,Kharif,Maize,3.6,Red,6.4,31,1000,27,Medium,No,No,Sprinkler,34000,3500,18,85.3,5,Maize cultivation exceeded expectations with excellent results.
+Punjab,Hoshiarpur,Mukerian,31.9500,75.6167,2021,Kharif,Maize,4.7,Alluvial,7.3,35,640,25,Low,No,No,Sprinkler,36000,4500,16,100.0,5,Outstanding maize production with excellent soil conditions.
+Tamil Nadu,Salem,Yercaud,11.7667,78.2000,2021,Kharif,Cotton,3.6,Red,6.2,29,900,29,Medium,No,No,Drip,49000,1750,44,57.1,4,Cotton farming was moderately successful with hill irrigation.
+Maharashtra,Beed,Georai,19.2667,75.7500,2021,Rabi,Wheat,3.5,Black,6.8,26,680,22,Low,No,No,Sprinkler,38000,3600,21,0.0,3,Wheat yield was average but market prices were very poor.
+Karnataka,Koppal,Kushtagi,15.7667,76.1833,2021,Kharif,Cotton,4.2,Black,7.0,33,930,27,Medium,No,No,Drip,50000,2000,42,68.0,4,Cotton cultivation was successful with good fiber quality.
+Telangana,Medak,Gajwel,17.8500,78.2167,2021,Kharif,Rice,3.1,Red,6.7,36,1150,28,Medium,No,No,Canal,41000,4300,24,50.2,4,Rice cultivation was good with adequate monsoon support.
+Punjab,Sangrur,Dhuri,30.3667,75.8667,2021,Rabi,Wheat,5.8,Alluvial,7.5,42,580,18,Low,No,No,Canal,45000,5700,20,53.3,5,Excellent wheat harvest with canal irrigation support.
+Tamil Nadu,Erode,Sathyamangalam,11.5000,77.2333,2021,Kharif,Maize,3.8,Red,6.3,30,890,28,Medium,No,No,Sprinkler,35000,3700,18,90.6,5,Maize production was exceptional with good management.
+Maharashtra,Osmanabad,Kalamb,18.4167,76.0333,2021,Kharif,Sugarcane,1.9,Black,7.2,44,1320,30,Medium,No,No,Drip,91000,69000,4.1,13.2,3,Sugarcane requires heavy investment but provides steady income.
+Karnataka,Gadag,Ron,15.7000,75.7333,2021,Rabi,Wheat,3.3,Black,6.9,27,720,21,Low,No,No,Sprinkler,37000,3600,22,14.6,3,Wheat yield was decent but market prices were disappointing.
+Telangana,Adilabad,Boath,19.3167,78.6667,2021,Kharif,Cotton,4.0,Red,6.6,34,1020,28,Medium,No,No,Drip,49000,1950,43,69.4,4,Cotton cultivation was profitable with good quality production.
+Punjab,Moga,Nihal Singh Wala,30.7667,75.2167,2021,Kharif,Cotton,4.5,Sandy,7.1,32,610,27,Medium,Yes,No,Sprinkler,53000,1680,45,42.6,4,Cotton cultivation faced drought stress but irrigation maintained yields.
+Tamil Nadu,Madurai,Melur,10.0333,78.3333,2021,Kharif,Rice,2.8,Alluvial,6.9,38,1420,30,High,No,Yes,Canal,43000,4500,24,51.2,4,Rice production was good despite some waterlogging issues.
+Maharashtra,Yavatmal,Pusad,19.9167,77.5833,2021,Rabi,Cotton,3.9,Black,6.8,29,700,23,Low,No,No,Sprinkler,47000,2300,40,95.7,5,Excellent cotton harvest with high quality fiber production.
+Karnataka,Chikkamagaluru,Kadur,13.5500,76.0167,2021,Kharif,Rice,2.5,Red,6.4,34,1150,26,Medium,No,No,Canal,40000,4000,24,40.0,4,Rice cultivation was satisfactory with good monsoon support.
+Telangana,Nalgonda,Devarakonda,16.6833,78.9167,2021,Kharif,Cotton,3.9,Alluvial,6.9,34,1100,28,Medium,No,No,Drip,49000,1950,43,71.0,4,Cotton farming was profitable with good yield and quality.
+Punjab,Nawanshahr,Balachaur,31.0167,76.3000,2021,Rabi,Wheat,5.9,Alluvial,7.6,43,590,18,Low,No,No,Canal,45000,5800,20,57.8,5,Outstanding wheat production with excellent irrigation facilities.
+Tamil Nadu,Tiruchirapalli,Lalgudi,10.8667,78.8167,2021,Kharif,Rice,3.0,Alluvial,7.0,39,1450,30,High,No,Yes,Canal,44000,4700,25,67.0,4,Rice farming was successful despite some flooding challenges.
+Maharashtra,Buldhana,Shegaon,20.7833,76.6833,2021,Kharif,Cotton,3.8,Black,6.9,33,1060,28,Medium,No,No,Drip,48000,1900,44,74.2,4,Cotton cultivation was profitable with good fiber quality.
+Karnataka,Mandya,Pandavapura,12.6667,76.6833,2021,Kharif,Sugarcane,1.6,Alluvial,7.0,43,1200,29,Medium,No,No,Flood,87000,66000,4.2,19.3,4,Sugarcane farming was moderately profitable with good irrigation.
+Telangana,Siddipet,Dubbak,17.7833,78.0833,2021,Kharif,Maize,3.7,Red,6.6,31,1000,27,Medium,No,No,Sprinkler,34000,3600,18,90.6,5,Maize production exceeded expectations with excellent management.
+Punjab,Ropar,Chamkaur Sahib,30.8833,76.3833,2021,Kharif,Cotton,4.4,Loamy,7.2,33,620,26,Medium,Yes,No,Sprinkler,53000,1700,45,44.3,4,Cotton faced drought but irrigation helped maintain decent yields.
+Tamil Nadu,Sivaganga,Devakottai,9.9500,78.8333,2021,Kharif,Cotton,3.7,Red,6.3,29,820,31,High,Yes,No,Drip,50000,1650,46,52.2,4,Cotton cultivation was challenging due to drought conditions.
+Maharashtra,Washim,Malegaon,20.5500,77.2167,2021,Rabi,Soybean,4.2,Black,6.8,25,640,23,Medium,No,No,Sprinkler,31000,2750,37,27.4,4,Soybean farming was moderately successful with irrigation support.
