@@ -1,0 +1,19 @@
+# This file overrides docker-compose.yml for local development
+# It enables hot-reload and better debugging
+
+version: '3.8'
+
+services:
+  backend:
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-level info
+    ports:
+      - "8000:8000"
+
+  frontend:
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    command: npm run dev
+    ports:
+      - "3000:3000"

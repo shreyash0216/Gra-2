@@ -1,10 +1,13 @@
 import { VillageData } from "../types";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export const getPrediction = async (data: VillageData) => {
   try {
-    const res = await fetch(`${API_BASE_URL}/predict`, {
+    // Use /api proxy in dev, direct URL in production
+    const endpoint = import.meta.env.DEV ? '/api/predict' : `${API_BASE_URL}/predict`;
+    
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
