@@ -11,7 +11,7 @@ app = FastAPI(title="GRA - Generative Resilience Agent API")
 # Configure Gemini securely via Environment Variable
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# CORS: Allow your specific domains + localhost for development
+# CORS: Allow localhost for development
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -19,9 +19,10 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://genresai.me", 
-        "https://www.genresai.me",
-        "https://main.d1zk8huugqz2c1.amplifyapp.com" # Your Amplify test URL
+        # Production URLs (uncomment when deploying)
+        # "https://genresai.me", 
+        # "https://www.genresai.me",
+        # "https://main.d1zk8huugqz2c1.amplifyapp.com" # Your Amplify test URL
     ],
     allow_credentials=True,
     allow_methods=["*"],
