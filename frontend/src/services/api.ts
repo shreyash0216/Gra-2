@@ -4,8 +4,9 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export const getPrediction = async (data: VillageData) => {
   try {
-    // Use /api proxy in dev, direct URL in production
-    const endpoint = import.meta.env.DEV ? '/api/predict' : `${API_BASE_URL}/predict`;
+    // Dev proxy commented out for production
+    // const endpoint = import.meta.env.DEV ? '/api/predict' : `${API_BASE_URL}/predict`;
+    const endpoint = `${API_BASE_URL}/predict`;
     
     console.log('📤 Sending prediction request to:', endpoint);
     
@@ -46,9 +47,9 @@ export const getPrediction = async (data: VillageData) => {
     console.error("❌ Prediction API Error:", error);
     
     // Provide helpful error messages
-    if (error instanceof TypeError && error.message.includes('fetch')) {
-      throw new Error('Backend connection failed. Is your FastAPI server running on port 8000? Try running: ./dev.sh');
-    }
+    // if (error instanceof TypeError && error.message.includes('fetch')) {
+    //   throw new Error('Backend connection failed. Is your FastAPI server running on port 8000? Try running: ./dev.sh');
+    // }
     
     throw error;
   }

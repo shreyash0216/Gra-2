@@ -4,8 +4,11 @@ export const getGeminiResponse = async (prompt: string): Promise<string> => {
   try {
     console.log('📤 Sending chat request:', prompt);
     
-    // Use /api/chat which Vite proxies to http://localhost:8000/chat
-    const response = await fetch('/api/chat', { 
+    // Dev proxy commented out for production
+    // const endpoint = import.meta.env.DEV ? '/api/chat' : `${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/chat`;
+    const endpoint = `${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/chat`;
+    
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json' 
@@ -33,9 +36,9 @@ export const getGeminiResponse = async (prompt: string): Promise<string> => {
     console.error("❌ Gemini Service Error:", error);
     
     // Provide helpful error messages
-    if (error instanceof TypeError && error.message.includes('fetch')) {
-      throw new Error('Backend connection failed. Is your FastAPI server running on port 8000? Try running: ./dev.sh');
-    }
+    // if (error instanceof TypeError && error.message.includes('fetch')) {
+    //   throw new Error('Backend connection failed. Is your FastAPI server running on port 8000? Try running: ./dev.sh');
+    // }
     
     throw error;
   }

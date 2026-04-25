@@ -1,6 +1,9 @@
 version: 1
 applications:
   - appRoot: frontend
+    env:
+      variables:
+        VITE_API_URL: "https://backend.genresai.me"
     frontend:
       phases:
         preBuild:
