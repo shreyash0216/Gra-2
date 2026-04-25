@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class PredictionService:
     def __init__(self):
         # Path to models/crop_model.pkl from backend/app/services/
-        self.model_path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "models", "crop_model.pkl")
+        self.model_path = os.path.join(os.path.dirname(__file__), "..", "..", "models", "crop_model.pkl")
         self.model = None
         self.load_model()
 
