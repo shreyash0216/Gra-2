@@ -29,9 +29,11 @@ const Chat: React.FC = () => {
       setMessages(prev => [...prev, { text: aiReply, sender: 'ai' as const }]);
     } catch (err) {
       // 4. Handle errors (like if the backend is down)
-      console.error(err);
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
+      console.error('Chat error:', err);
+      
       setMessages(prev => [...prev, { 
-        text: "The AI agent is currently offline. Check your AWS App Runner status.", 
+        text: `❌ ${errorMessage}`, 
         sender: 'ai' as const 
       }]);
     } finally {

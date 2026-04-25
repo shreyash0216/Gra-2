@@ -7,6 +7,8 @@ export const getPrediction = async (data: VillageData) => {
     // Use /api proxy in dev, direct URL in production
     const endpoint = import.meta.env.DEV ? '/api/predict' : `${API_BASE_URL}/predict`;
     
+    console.log('📤 Sending prediction request to:', endpoint);
+    
     const res = await fetch(endpoint, {
       method: "POST",
       headers: {
@@ -23,11 +25,17 @@ export const getPrediction = async (data: VillageData) => {
       })
     });
 
+    console.log('📥 Prediction response status:', res.status);
+
     if (!res.ok) {
-      throw new Error(`Server responded with ${res.status}`);
+      const errorText = await res.text();
+      console.error('❌ Backend error:', errorText);
+      throw new Error(`Prediction failed (${res.status}): ${errorText || 'Backend error'}`);
     }
 
     const json = await res.json();
+    console.log('✅ Prediction result:', json);
+    
     return {
       ...json,
       id: crypto.randomUUID(),
@@ -35,7 +43,13 @@ export const getPrediction = async (data: VillageData) => {
       village_data: data
     };
   } catch (error) {
-    console.error("Prediction API Error:", error);
+    console.error("❌ Prediction API Error:", error);
+    
+    // Provide helpful error messages
+    if (error instanceof TypeError && error.message.includes('fetch')) {
+      throw new Error('Backend connection failed. Is your FastAPI server running on port 8000? Try running: ./dev.sh');
+    }
+    
     throw error;
   }
 };

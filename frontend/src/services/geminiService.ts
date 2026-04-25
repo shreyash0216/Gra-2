@@ -1,8 +1,10 @@
 // frontend/src/services/geminiService.ts
 
-export const getGeminiResponse = async (prompt: string) => {
+export const getGeminiResponse = async (prompt: string): Promise<string> => {
   try {
-    // We use '/api/chat' because Amplify will proxy this to your backend
+    console.log('📤 Sending chat request:', prompt);
+    
+    // Use /api/chat which Vite proxies to http://localhost:8000/chat
     const response = await fetch('/api/chat', { 
       method: 'POST',
       headers: { 
@@ -11,15 +13,30 @@ export const getGeminiResponse = async (prompt: string) => {
       body: JSON.stringify({ user_input: prompt })
     });
 
+    console.log('📥 Response status:', response.status);
+
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.detail || 'Backend connection failed');
+      const errorText = await response.text();
+      console.error('❌ Backend error response:', errorText);
+      throw new Error(`Backend error (${response.status}): ${errorText || 'Unknown error'}`);
     }
 
     const data = await response.json();
-    return data.reply; // This matches the {"reply": ...} from your FastAPI
+    console.log('✅ Response data:', data);
+    
+    if (!data.reply) {
+      throw new Error('Invalid response format: missing "reply" field');
+    }
+
+    return data.reply;
   } catch (error) {
-    console.error("Gemini Service Error:", error);
+    console.error("❌ Gemini Service Error:", error);
+    
+    // Provide helpful error messages
+    if (error instanceof TypeError && error.message.includes('fetch')) {
+      throw new Error('Backend connection failed. Is your FastAPI server running on port 8000? Try running: ./dev.sh');
+    }
+    
     throw error;
   }
 };
