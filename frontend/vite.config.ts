@@ -8,14 +8,14 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
-        // Proxy disabled for production
-        // proxy: mode === 'development' ? {
-        //   '/api': {
-        //     target: env.VITE_API_URL || 'http://localhost:8000',
-        //     changeOrigin: true,
-        //     rewrite: (path) => path.replace(/^\/api/, '')
-        //   }
-        // } : undefined
+        // Dev proxy: /api/predict → localhost:8000/predict
+        proxy: mode === 'development' ? {
+          '/api': {
+            target: env.VITE_API_URL || 'http://localhost:8000',
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/api/, '')
+          }
+        } : undefined
       },
       plugins: [react()],
       resolve: {

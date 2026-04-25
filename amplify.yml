@@ -19,3 +19,7 @@ applications:
       cache:
         paths:
           - node_modules/**/*
+      rewrites:
+        - source: /api/<*>
+          target: https://backend.genresai.me/<*>
+          status: 200

@@ -4,9 +4,8 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export const getPrediction = async (data: VillageData) => {
   try {
-    // Dev proxy commented out for production
-    // const endpoint = import.meta.env.DEV ? '/api/predict' : `${API_BASE_URL}/predict`;
-    const endpoint = `${API_BASE_URL}/predict`;
+    // Amplify proxies /api/predict → backend.genresai.me/predict
+    const endpoint = '/api/predict';
     
     console.log('📤 Sending prediction request to:', endpoint);
     
