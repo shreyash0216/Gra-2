@@ -1,9 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import os
+import google.generativeai as genai
 from app.services.prediction_service import prediction_service
 
 app = FastAPI(title="GRA - Generative Resilience Agent API")
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 app.add_middleware(
     CORSMiddleware,
@@ -30,6 +34,15 @@ def health_check():
 def predict_crop(data: CropInput):
     recommendations = prediction_service.predict(data)
     return {"recommendations": recommendations}
+
+class ChatRequest(BaseModel):
+    user_input: str
+
+@app.post("/api/chat")
+async def chat_with_gemini(request: ChatRequest):
+    model = genai.GenerativeModel('gemini-pro')
+    response = model.generate_content(request.user_input)
+    return {"reply": response.text}
 
 @app.get("/market-prices")
 def get_prices():

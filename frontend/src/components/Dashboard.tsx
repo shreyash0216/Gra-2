@@ -1,6 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, Map, Zap, TrendingUp, IndianRupee, ShieldAlert, ArrowRight, Leaf, Download, Sparkles } from 'lucide-react';
-import { getExplanation } from '../services/geminiService';
+import { getGeminiResponse } from '../services/geminiService';
 import { AdaptationPlan, VillageData, Theme, Recommendation } from '../types';
 
 interface Props {
@@ -17,12 +17,19 @@ const Dashboard: React.FC<Props> = ({ plan, data }) => {
     const fetchExplanation = async () => {
       try {
         if (plan?.recommendations?.length && data) {
-          const text = await getExplanation(
-            plan.recommendations[0].crop, 
-            data.annual_rainfall, 
-            6.5 // Default pH
-          );
-          setExplanation(text);
+          const crop = plan.recommendations[0].crop;
+          const rainfall = data.annual_rainfall;
+          const ph = 6.5; // Default pH
+          
+          const prompt = `
+            As a professional agricultural climate resilience expert, briefly explain why ${crop} 
+            is a good recommendation for a region with ${rainfall}mm annual rainfall and a soil pH of ${ph}.
+            Highlight one specific resilience tip for this crop.
+            Keep it under 3 sentences.
+          `;
+          
+          const result = await getGeminiResponse(prompt);
+          setExplanation(result.reply || "Insight generation unavailable at this moment.");
         }
       } catch (err) {
         console.error("AI Error:", err);
