@@ -55,3 +55,11 @@ Thumbs.db
 .dockerignore
 docker-compose.override.yml
 
+venv/
+venv311/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.git
+.DS_Store

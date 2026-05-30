@@ -66,7 +66,7 @@ const App: React.FC = () => {
       setAppState(AppState.DASHBOARD);
     } catch (err: any) {
       console.error(err);
-      setError("Backend connection failed. Is your FastAPI server running on port 8000?");
+      setError("Backend connection failed!");
       setAppState(AppState.FORM);
     }
   };
