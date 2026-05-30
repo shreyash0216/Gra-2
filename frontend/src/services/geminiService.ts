@@ -4,9 +4,9 @@ export const getGeminiResponse = async (prompt: string): Promise<string> => {
   try {
     console.log('📤 Sending chat request:', prompt);
     
-    // Amplify proxies /api/chat → backend.genresai.me/chat
-    const endpoint = '/api/chat';
-    
+    const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const endpoint = `${API_BASE_URL}/chat`;
+
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 

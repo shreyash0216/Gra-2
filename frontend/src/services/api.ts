@@ -1,12 +1,10 @@
 import { VillageData } from "../types";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
-
 export const getPrediction = async (data: VillageData) => {
   try {
-    // Amplify proxies /api/predict → backend.genresai.me/predict
-    const endpoint = '/api/predict';
-    
+    const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+    const endpoint = `${API_BASE_URL}/predict`;
+
     console.log('📤 Sending prediction request to:', endpoint);
     
     const res = await fetch(endpoint, {
