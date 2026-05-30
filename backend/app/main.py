@@ -67,7 +67,7 @@ async def chat_with_gemini(request: ChatRequest):
             detail="Gemini API Key is not configured on the backend server. Please set the GOOGLE_API_KEY environment variable in your Render dashboard."
         )
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(request.user_input)
         return {"reply": response.text}
     except Exception as e:
