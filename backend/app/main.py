@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
@@ -8,8 +8,12 @@ from app.services.prediction_service import prediction_service
 
 app = FastAPI(title="GRA - Generative Resilience Agent API")
 
-# Configure Gemini securely via Environment Variable
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Configure Gemini securely via Environment Variable (support both GOOGLE_API_KEY and GEMINI_API_KEY)
+api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
+if api_key:
+    genai.configure(api_key=api_key)
+else:
+    print("⚠️ WARNING: Neither GOOGLE_API_KEY nor GEMINI_API_KEY is configured in the environment variables.")
 
 # CORS: Allow localhost for development and production domains
 app.add_middleware(
@@ -56,9 +60,21 @@ def predict_crop(data: CropInput):
 # 3. Chat Route (REMOVED /api prefix)
 @app.post("/chat")
 async def chat_with_gemini(request: ChatRequest):
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content(request.user_input)
-    return {"reply": response.text}
+    api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        raise HTTPException(
+            status_code=500,
+            detail="Gemini API Key is not configured on the backend server. Please set the GOOGLE_API_KEY environment variable in your Render dashboard."
+        )
+    try:
+        model = genai.GenerativeModel('gemini-pro')
+        response = model.generate_content(request.user_input)
+        return {"reply": response.text}
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Gemini API Error: {str(e)}"
+        )
 
 @app.get("/market-prices")
 def get_prices():
