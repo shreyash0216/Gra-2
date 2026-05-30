@@ -21,6 +21,7 @@ app.add_middleware(
         # "http://localhost:5173",
         # "http://127.0.0.1:5173",
         # Production
+        "https://gra-2-six.vercel.app",
         "https://genresai.me",
         "https://www.genresai.me",
     ],
